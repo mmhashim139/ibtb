@@ -17,3 +17,16 @@
     height: 100px;
     background-color: green;
 }
+
+
+
+/* Cards Design */
+
+.card-title {
+    font-size: 22px;
+}
+
+.card-img-top {
+    height : 200px;
+    width: 200px;
+}
