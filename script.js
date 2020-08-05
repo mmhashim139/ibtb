@@ -56,25 +56,34 @@ fetch(apiUrl, {
 
     function updateDOM(providedData = data) {
   // Clear main div
+  
         
     providedData.forEach(item => {
     const element = document.createElement('div');
-    element.classList.add('container');
+    element.classList.add('col-4');
     element.innerHTML = `
-                <div class="card place-card" id="place-card">
-                <div id="place-image"><img class="card-img-top" src="${item.imageUrl}" alt="Card image cap"></div>
-				<div class="card-body">
-					<div class="card-title" id="place-name">${item.name}</div>
-                    <div class="card-text" id="place-country">${item.country}</div>
-                    <div class="card-text" id="place-region">${item.region}</div>
-                    <div class="card-text" id="place-locality">${item.locality}</div>
-                    <div class="card-text" id="place-tags">${item.tags} </div>
-					<div class="card-text" id="place-url"><small class="text-muted"><a href="${item.websiteUrl}" target="_blank"> Website </a></small></div>
-                    <div class="card-text" id="place-tel"><small class="text-muted"><a href="tel:${item.tel}">${item.tel}</a></small></div>
-                    <div class="card-text" id="place-map-location"><a href="${item.mapUrl}" target="_blank" > Location</a></div> 
-				</div>
-			</div>
-
+<div class="card" >
+    <div id="place-image"><img class="card-img-top" src="${item.imageUrl}" alt="Card image cap"></div>
+    <div class="card-body">
+        <h5 class="card-title" id="place-name">${item.name}</h5>
+        <div class="row justify-content-center">
+            <div class="col-6 card-text" id="place-region">${item.region}</div>
+            <div class="col-6 card-text" id="place-locality">${item.locality}</div>
+        </div>
+        <div class="card-text" id="place-tags">${item.tags} </div>
+        <div class="row justify-content-center">
+            <div class="col-4" id="place-url">
+                <a href="${item.websiteUrl}" target="_blank" class="btn btn-primary"> Website </a>
+            </div>
+            <div class="col-4" id="place-tel">
+                <a href="tel:${item.tel}" class="btn btn-primary">${item.tel}</a>
+            </div>
+            <div class="col-4" id="place-map-location">
+                <a href="${item.mapUrl}" target="_blank" class="btn btn-primary"> Location</a>
+            </div> 
+        </div>
+    </div>
+ </div>
       `
         cardDeck.appendChild(element);
       });
