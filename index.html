@@ -36,7 +36,7 @@
 								<a href="#" class="nav-link active">Home</a>
 							</li>
 							<li class="nav-item">
-								<a href="indextest.html" class="nav-link">Page 1</a>
+								<a href="indextest.html" class="nav-link">All Places</a>
 							</li>
 							<li class="nav-item">
 								<a href="#" class="nav-link">Page 2</a>
@@ -53,22 +53,25 @@
 	<header>
 		<h1>Ireland Best Places to Be ..</h1>
 		<h3>Find best places in Ireland</h3>
-		<button>Find a place</button>
+        <h3 class="header-btn ">
+		    <a class="btn btn-outline-success"> Find a place</a>
+        </h3>
 	</header>
 	<!-- ******************************** Search Area ********************************-->
 	<div id="search-area">
+    <h2> Search for a place </h2>
 		<div class="form-row">
-			<div class="col-12">
+			<div class=" search-input col-md-6">
 				<input type="text" class="form-control" placeholder="Name">
             </div>
-				<div class="col-12">
+				<div class="search-input col-md-6">
 				<input type="text" class="form-control" placeholder="Location">
             </div>
-				<div class="col-12">
+				<div class="search-input col-md-6">
 				<input type="text" class="form-control" placeholder="Type/Activities">
             </div>
-			<div class="col-4">
-				<button type="submit" class="btn">Find a place..</button>
+			<div class="search-button col-4">
+				<button type="submit" class="btn btn-outline-success">Find a place..</button>
 			</div>
 		</div>
 	</div>
@@ -79,91 +82,151 @@
 	</div>
 
 <!-- ************************* Location Browsing section ************************-->
-	<div id="shopping-activities">
+	<div class="cards-section" id="shopping-activities">
 		<h2>Shopping Activities</h2>
 
-		<div class="card-deck" id="card-deck">
-        <!--
-        <div class="container">
-                <div class="card place-card" id="place-card">
-                <div id="place-image"></div>
-				<div class="card-body">
-					<div class="card-title" id="place-name">Place Name</div>
-                    <div class="card-text" id="place-country"></div>
-                    <div class="card-text" id="place-region"></div>
-                    <div class="card-text" id="place-locality"></div>
-                    <div class="card-text" id="place-tags"></div>
-					<div class="card-text" id="place-url"><small class="text-muted">URL</small></div>
-                    <div class="card-text" id="place-tel"><small class="text-muted">Tel</small></div>
-                    <div class="card-text" id="place-map-location"></div> 
-				</div>
-			</div>
+    <div class="card-deck">
+    <div class="card" >
+    <div ><img class="card-img-top" src="images/blank.jpg" alt="Card image cap"></div>
+    <div class="card-body">
+        <h5 class="card-title">Place Name</h5>
+        <div class="row justify-content-center">
+            <div class="col-4 card-text place-location" >County</div>
+            <div class="col-4 card-text place-location" >Town</div>
         </div>
-			<div class="card">
-				<img class="card-img-top" src="..." alt="Card image cap">
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-					sapiente aspernatur assumenda .</p>
-					<p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-                    <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-                     <a href="#" class="btn btn-primary">Location</a>
-				</div>
-			</div>
-			<div class="card">
-				<img class="card-img-top" src="..." alt="Card image cap">
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-					sapiente aspernatur assumenda .</p>
-					<p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-                    <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-                     <a href="#" class="btn btn-primary">Location</a>
-				</div>
-			</div>
-		</div>
+        <div class="card-text place-activities" >Place Activities</div>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <a href="${item.websiteUrl}" target="_blank" class=" card-link-btn btn btn-primary"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-4" >
+                <a href="tel:${item.tel}" class="card-link-btn btn btn-primary"><i class="fa fa-phone-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-4" >
+                <a href="${item.mapUrl}" target="_blank" class="card-link-btn btn btn-primary"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+            </div> 
+        </div>
+    </div>
+    </div>
+    <div class="card" >
+    <div ><img class="card-img-top" src="images/blank.jpg" alt="Card image cap"></div>
+    <div class="card-body">
+        <h5 class="card-title">Place Name</h5>
+        <div class="row justify-content-center">
+            <div class="col-4 card-text place-location" >County</div>
+            <div class="col-4 card-text place-location" >Town</div>
+        </div>
+        <div class="card-text place-activities" >Place Activities</div>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <a href="${item.websiteUrl}" target="_blank" class="card-link-btn btn btn-primary"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-4" >
+                <a href="tel:${item.tel}" class="card-link-btn btn btn-primary"><i class="fa fa-phone-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-4" >
+                <a href="${item.mapUrl}" target="_blank" class="card-link-btn btn btn-primary"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+            </div> 
+        </div>
+    </div>
+    </div>
+    <div class="card" >
+    <div ><img class="card-img-top" src="images/blank.jpg" alt="Card image cap"></div>
+    <div class="card-body">
+        <h5 class="card-title">Place Name</h5>
+        <div class="row justify-content-center">
+            <div class="col-4 card-text place-location" >County</div>
+            <div class="col-4 card-text place-location" >Town</div>
+        </div>
+        <div class="card-text place-activities" >Place Activities</div>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <a href="${item.websiteUrl}" target="_blank" class="card-link-btn btn btn-primary"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-4" >
+                <a href="tel:${item.tel}" class="card-link-btn btn btn-primary"><i class="fa fa-phone-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-4" >
+                <a href="${item.mapUrl}" target="_blank" class="card-link-btn btn btn-primary"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+            </div> 
+        </div>
+    </div>
+    </div>
+	</div>
 	</div>
 
-  -->
 <!--///////////////////////////////////////-->
 
-	<div id="historic">
+	<div class="cards-section" id="historic">
 		<h2>historic & Castle</h2>
 
-		<div class="card-deck">
-			<div class="card">
-				<img class="card-img-top" src="..." alt="Card image cap">
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-					sapiente aspernatur assumenda .</p>
-					<p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-                    <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-                     <a href="#" class="btn btn-primary">Location</a>
-				</div>
-			</div>
-			<div class="card">
-				<img class="card-img-top" src="..." alt="Card image cap">
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-					sapiente aspernatur assumenda .</p>
-					<p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-                    <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-                     <a href="#" class="btn btn-primary">Location</a>
-				</div>
-			</div>
-			<div class="card">
-				<img class="card-img-top" src="..." alt="Card image cap">
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-					sapiente aspernatur assumenda .</p>
-					<p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-                    <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-                     <a href="#" class="btn btn-primary">Location</a>
-				</div>
-			</div>
+	<div class="card-deck">
+    <div class="card" >
+    <div ><img class="card-img-top" src="images/blank.jpg" alt="Card image cap"></div>
+    <div class="card-body">
+        <h5 class="card-title">Place Name</h5>
+        <div class="row justify-content-center">
+            <div class="col-4 card-text place-location" >County</div>
+            <div class="col-4 card-text place-location" >Town</div>
+        </div>
+        <div class="card-text place-activities" >Place Activities</div>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <a href="${item.websiteUrl}" target="_blank" class="card-link-btn btn btn-primary"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-4" >
+                <a href="tel:${item.tel}" class="card-link-btn btn btn-primary"><i class="fa fa-phone-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-4" >
+                <a href="${item.mapUrl}" target="_blank" class="card-link-btn btn btn-primary"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+            </div> 
+        </div>
+    </div>
+    </div>
+    <div class="card" >
+    <div ><img class="card-img-top" src="images/blank.jpg" alt="Card image cap"></div>
+    <div class="card-body">
+        <h5 class="card-title">Place Name</h5>
+        <div class="row justify-content-center">
+            <div class="col-4 card-text place-location" >County</div>
+            <div class="col-4 card-text place-location" >Town</div>
+        </div>
+        <div class="card-text place-activities" >Place Activities</div>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <a href="${item.websiteUrl}" target="_blank" class="card-link-btn btn btn-primary"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-4" >
+                <a href="tel:${item.tel}" class="card-link-btn btn btn-primary"><i class="fa fa-phone-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-4" >
+                <a href="${item.mapUrl}" target="_blank" class="card-link-btn btn btn-primary"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+            </div> 
+        </div>
+    </div>
+    </div>
+    <div class="card" >
+    <div ><img class="card-img-top" src="images/blank.jpg" alt="Card image cap"></div>
+    <div class="card-body">
+        <h5 class="card-title">Place Name</h5>
+        <div class="row justify-content-center">
+            <div class="col-4 card-text place-location" >County</div>
+            <div class="col-4 card-text place-location" >Town</div>
+        </div>
+        <div class="card-text place-activities" >Place Activities</div>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <a href="${item.websiteUrl}" target="_blank" class="card-link-btn btn btn-primary"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-4" >
+                <a href="tel:${item.tel}" class="card-link-btn btn btn-primary"><i class="fa fa-phone-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-4" >
+                <a href="${item.mapUrl}" target="_blank" class="card-link-btn btn btn-primary"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+            </div> 
+        </div>
+    </div>
+    </div>
 		</div>
 	</div>
 <!-- ******************************** Separator ********************************-->
@@ -173,52 +236,87 @@
 	</div>
 <!--///////////////////////////////////////-->
 
-	<div id="nature">
+	<div class="cards-section" id="nature">
 		<h2>Natural & Wildlife</h2>
 
 		<div class="card-deck">
-			<div class="card">
-				<img class="card-img-top" src="..." alt="Card image cap">
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-					sapiente aspernatur assumenda .</p>
-					<p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-                    <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-                     <a href="#" class="btn btn-primary">Location</a>
-				</div>
-			</div>
-			<div class="card">
-				<img class="card-img-top" src="..." alt="Card image cap">
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-					sapiente aspernatur assumenda .</p>
-					<p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-                    <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-                     <a href="#" class="btn btn-primary">Location</a>
-				</div>
-			</div>
-			<div class="card">
-				<img class="card-img-top" src="..." alt="Card image cap">
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-					sapiente aspernatur assumenda .</p>
-					<p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-                    <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
-                     <a href="#" class="btn btn-primary">Location</a>
-				</div>
-			</div>
+    <div class="card" >
+    <div ><img class="card-img-top" src="images/blank.jpg" alt="Card image cap"></div>
+    <div class="card-body">
+        <h5 class="card-title">Place Name</h5>
+        <div class="row justify-content-center">
+            <div class="col-4 card-text place-location" >County</div>
+            <div class="col-4 card-text place-location" >Town</div>
+        </div>
+        <div class="card-text place-activities" >Place Activities</div>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <a href="${item.websiteUrl}" target="_blank" class="card-link-btn btn btn-primary"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-4" >
+                <a href="tel:${item.tel}" class="card-link-btn btn btn-primary"><i class="fa fa-phone-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-4" >
+                <a href="${item.mapUrl}" target="_blank" class="card-link-btn btn btn-primary"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+            </div> 
+        </div>
+    </div>
+    </div>
+    <div class="card" >
+    <div ><img class="card-img-top" src="images/blank.jpg" alt="Card image cap"></div>
+    <div class="card-body">
+        <h5 class="card-title">Place Name</h5>
+        <div class="row justify-content-center">
+            <div class="col-4 card-text place-location" >County</div>
+            <div class="col-4 card-text place-location" >Town</div>
+        </div>
+        <div class="card-text place-activities" >Place Activities</div>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <a href="${item.websiteUrl}" target="_blank" class="card-link-btn btn btn-primary"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-4" >
+                <a href="tel:${item.tel}" class="card-link-btn btn btn-primary"><i class="fa fa-phone-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-4" >
+                <a href="${item.mapUrl}" target="_blank" class="card-link-btn btn btn-primary"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+            </div> 
+        </div>
+    </div>
+    </div>
+    <div class="card" >
+    <div ><img class="card-img-top" src="images/blank.jpg" alt="Card image cap"></div>
+    <div class="card-body">
+        <h5 class="card-title">Place Name</h5>
+        <div class="row justify-content-center">
+            <div class="col-4 card-text place-location" >County</div>
+            <div class="col-4 card-text place-location" >Town</div>
+        </div>
+        <div class="card-text place-activities" >Place Activities</div>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <a href="${item.websiteUrl}" target="_blank" class="card-link-btn btn btn-primary"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-4" >
+                <a href="tel:${item.tel}" class="card-link-btn btn btn-primary"><i class="fa fa-phone-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-4" >
+                <a href="${item.mapUrl}" target="_blank" class="card-link-btn btn btn-primary"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+            </div> 
+        </div>
+    </div>
+    </div>
 		</div>
 	</div>
 
 <!-- ******************************** Recommend a place form section ********************************-->
 
-<div id="recommend-place">
+<div class="recommend-section" id="recommend-place">
     <h3>Would you like to recommend a place for us</h3>
     <h4>Fill the form below ..</h4>
-    <a href="#" class="btn">Recommend A Place</a>
+    <h5 >
+    <a href="#" class="btn btn-outline-success">Recommend A Place</a>
+    </h5>
 </div>
 
 <!-- ******************************** About section ********************************-->
@@ -241,30 +339,6 @@
 <div id="footer">
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 				<!-- Bootstrap Javascript links-->

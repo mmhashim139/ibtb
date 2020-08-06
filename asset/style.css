@@ -3,19 +3,137 @@
 
 
 *{
-    
-    padding: 10px;
-
+    padding: 5px;
 }
+
+
+/* === ================= ===*/
+header {
+    height: 70vh;
+    background-color: rgba(88, 236, 88, 0.425);
+}
+
+header h1 {
+    padding-top: 100px;
+    text-align:center;
+}
+
+header h3 {
+    text-align:center;
+}
+
+.header-btn  {
+    margin-top: 20px;
+    text-align:center;
+    justify-content: center;
+}
+
+
+
+
+
+/* === ================= ===*/
+
+#search-area {
+    margin: 10px;
+    padding: 10px;
+}
+
+
+
+#search-area h2 {
+  margin: 10px;  
+}
+
+
+#search-area .form-row {
+    padding: 5px;   
+}
+
+#search-area .search-input {
+    margin-top: 5px;
+}
+
+
+#search-area .search-button {
+    margin: 5px ;
+}
+
+/* === ================= ===*/
+
+.cards-section {
+    margin-top: 20px;
+}
+
+.cards-section h2 {
+    margin: 10px;
+}
+
+.cards-section .card-deck {
+    padding: 10px;
+}
+
+.card {
+    border: 1PX solid green;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card-text {
+    text-align: center;
+}
+
+.place-location {
+    border: 1px solid orange;
+    border-radius: 25px;
+    height: 25px;
+    margin: 5px;
+    padding: 0px;
+}
+
+.place-activities {
+    height: 150px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.card-link-btn {
+    background-color: rgba(0, 128, 0, 0.836);
+    height: 40px;;
+    border-radius: 50%;
+}
+
+
+/* =================================*/
+
+.recommend-section{
+    padding-top: 70px;
+    border: 1px solid orange;
+}
+
+.recommend-section h3 , 
+.recommend-section h4 ,
+.recommend-section h5 {
+    margin-top: 20px;
+    text-align:center;
+    justify-content: center;
+}
+
+
+
+
+
 
 #footer{
     height: 300px;
-    background-color: gray;
+    background-color: orange;
 }
 
 #separator-1 ,#separator-2 ,#separator-3 {
     height: 100px;
-    background-color: green;
+    background-color: rgba(88, 236, 88, 0.425);
 }
 
 
@@ -27,6 +145,5 @@
 }
 
 .card-img-top {
-    height : 200px;
-    width: 200px;
+    box-sizing: border-box; 
 }

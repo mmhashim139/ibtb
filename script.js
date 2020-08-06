@@ -1,16 +1,5 @@
 // Define Cards Variables 
 
-const placeCard = document.getElementById('place-card'); 
-const placeImage = document.getElementById('place-image'); 
-const placeName = document.getElementById('place-name'); 
-const placeType = document.getElementById('place-type'); 
-const placeUrl = document.getElementById('place-url'); 
-const placeMapLocation = document.getElementById('place-map-location');
-const placeTel = document.getElementById('place-tel'); 
-const placeCountry = document.getElementById('place-country'); 
-const placeRegion = document.getElementById('place-region'); 
-const placeLocality = document.getElementById('place-locality'); 
-const placeTags = document.getElementById('place-tags'); 
 const cardDeck = document.getElementById('card-deck')
 
 
@@ -28,7 +17,7 @@ fetch(apiUrl, {
   })
       .then(res => res.json())
       .then(data => {
-          for (i = 0 ; i<=3000 ; i++) {
+          for (i = 0 ; i<=50 ; i++) {
           const place = data.results[i];
           const newPlace = {
               name : `${place.name}`,
@@ -41,6 +30,7 @@ fetch(apiUrl, {
               tags : `${place.tags}`,
               mapUrl : `http://www.google.com/maps/place/${place.geo.latitude},${place.geo.longitude}`
           }
+
         addNewPlace(newPlace);
           }
       })
@@ -55,31 +45,30 @@ fetch(apiUrl, {
     }
 
     function updateDOM(providedData = data) {
-  // Clear main div
-  
-        
+ 
+
     providedData.forEach(item => {
     const element = document.createElement('div');
-    element.classList.add('col-4');
+    element.classList.add('col-md-4');
     element.innerHTML = `
-<div class="card" >
+    <div class="card">
     <div id="place-image"><img class="card-img-top" src="${item.imageUrl}" alt="Card image cap"></div>
     <div class="card-body">
         <h5 class="card-title" id="place-name">${item.name}</h5>
         <div class="row justify-content-center">
-            <div class="col-6 card-text" id="place-region">${item.region}</div>
-            <div class="col-6 card-text" id="place-locality">${item.locality}</div>
+            <div class="col-4 card-text place-location" id="place-region">${item.region}</div>
+            <div class="col-4 card-text place-location" id="place-locality">${item.locality}</div>
         </div>
-        <div class="card-text" id="place-tags">${item.tags} </div>
+        <div class="card-text place-activities" id="place-tags">${item.tags} </div>
         <div class="row justify-content-center">
             <div class="col-4" id="place-url">
-                <a href="${item.websiteUrl}" target="_blank" class="btn btn-primary"> Website </a>
+                <a href="${item.websiteUrl}" target="_blank" class="card-link-btn btn btn-primary"><i class="fa fa-external-link" aria-hidden="true"></i></a>
             </div>
             <div class="col-4" id="place-tel">
-                <a href="tel:${item.tel}" class="btn btn-primary">${item.tel}</a>
+                <a href="tel:${item.tel}" class="card-link-btn btn btn-primary"><i class="fa fa-phone-square" aria-hidden="true"></i></a>
             </div>
             <div class="col-4" id="place-map-location">
-                <a href="${item.mapUrl}" target="_blank" class="btn btn-primary"> Location</a>
+                <a href="${item.mapUrl}" target="_blank" class="card-link-btn btn btn-primary"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
             </div> 
         </div>
     </div>
