@@ -94,9 +94,21 @@ header h3 {
 }
 
 .place-activities {
-    height: 150px;
     margin: 5px;
     padding: 5px;
+    height: 150px;
+}
+
+.tags-view {
+    border: 1px solid orange;
+    border-radius: 25px;
+    margin: 3px;
+    padding: 3px;
+    background-color: rgba(255, 166, 0, 0.5);
+    font-size: 12px;
+    display: inline-block;
+    
+    
 }
 
 .card-link-btn {

@@ -22,6 +22,7 @@ function fetchData(apiUrl,callback){
     .then(res => res.json())
     .then(data => {
         for (i = 0 ; i< data.results.length ; i++) {
+            
           // Define Place Values from the API
 
           const newPlace = {
@@ -32,8 +33,10 @@ function fetchData(apiUrl,callback){
               country :`${data.results[i].address.addressCountry}`,
               region : `${data.results[i].address.addressRegion}`,
               locality : `${data.results[i].address.addressLocality}`,
-              tags : `${data.results[i].tags}`,
-              mapUrl : `http://www.google.com/maps/place/${data.results[i].geo.latitude},${data.results[i].geo.longitude}`
+              tags : `${data.results[i].tags}`, 
+              mapUrl : `http://www.google.com/maps/place/${data.results[i].geo.latitude},${data.results[i].geo.longitude}`,
+
+
           }
           // push the newPlace values to the places Array 
           places.push(newPlace);
@@ -50,6 +53,12 @@ function fetchData(apiUrl,callback){
 // Define UpdateDOM function 
 function updateDOM(places) {
     places.forEach(item => {
+    // split tags Array in view
+        let tagsItems = item.tags.split(',');
+        let tagView = '';
+        tagsItems.forEach(tag => {
+                   tagView = tagView + `<a class="tags-view">${tag}</a>` 
+                });
     const element = document.createElement('div');
     element.classList.add('col-md-4');
     element.innerHTML = `
@@ -61,7 +70,9 @@ function updateDOM(places) {
                     <div class="col-4 card-text place-location" id="place-region">${item.region}</div>
                     <div class="col-4 card-text place-location" id="place-locality">${item.locality}</div>
                 </div>
-                <div class="card-text place-activities" id="place-tags">${item.tags} </div>
+                <div class="card-text place-activities " id="place-tags">
+                    ${tagView} 
+                </div>
                 <div class="row justify-content-center">
                     <div class="col-4" id="place-url">
                         <a href="${item.websiteUrl}" target="_blank" class="card-link-btn btn btn-primary"><i class="fa fa-external-link" aria-hidden="true"></i></a>
