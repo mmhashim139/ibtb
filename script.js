@@ -1,86 +1,81 @@
-// Define Cards Variables 
+// Define Variables 
 
-const cardDeck = document.getElementById('card-deck')
+const cardDeck = document.getElementById('card-deck');
+const baseApiUrl = `https://failteireland.azure-api.net/opendata-api/v1/attractions`;
 
+// Define Places Array 
+let places = [];
 
-let data = [];
+// call fetchData Function
 
-// Fetch API 
-const apiUrl = `https://failteireland.azure-api.net/opendata-api/v1/attractions`;
+fetchData(baseApiUrl, updateDOM)
 
-fetch(apiUrl, {
+// Define FetchData function
+function fetchData(apiUrl,callback){
+    fetch(apiUrl, {
     headers: {
-    method: "GET",
-    Host: 'failteireland.azure-api.net',
-    'Ocp-Apim-Subscription-Key':'f6286d9d65514154b54c6c36cf3615d9'
-    }
-  })
-      .then(res => res.json())
-      .then(data => {
-          for (i = 0 ; i<=50 ; i++) {
-          const place = data.results[i];
+        method: "GET",
+        Host: 'failteireland.azure-api.net',
+        'Ocp-Apim-Subscription-Key':'f6286d9d65514154b54c6c36cf3615d9'
+        }
+    })
+    .then(res => res.json())
+    .then(data => {
+        for (i = 0 ; i< data.results.length ; i++) {
+          // Define Place Values from the API
+
           const newPlace = {
-              name : `${place.name}`,
-              imageUrl : `${place.image.url}`,
-              websiteUrl : `${place.url}`,
-              tel : `${place.telephone}`,
-              country :`${place.address.addressCountry}`,
-              region : `${place.address.addressRegion}`,
-              locality : `${place.address.addressLocality}`,
-              tags : `${place.tags}`,
-              mapUrl : `http://www.google.com/maps/place/${place.geo.latitude},${place.geo.longitude}`
+              name : `${data.results[i].name}`,
+              imageUrl : `${data.results[i].image.url}`,
+              websiteUrl : `${data.results[i].url}`,
+              tel : `${data.results[i].telephone}`,
+              country :`${data.results[i].address.addressCountry}`,
+              region : `${data.results[i].address.addressRegion}`,
+              locality : `${data.results[i].address.addressLocality}`,
+              tags : `${data.results[i].tags}`,
+              mapUrl : `http://www.google.com/maps/place/${data.results[i].geo.latitude},${data.results[i].geo.longitude}`
+          }
+          // push the newPlace values to the places Array 
+          places.push(newPlace);
           }
 
-        addNewPlace(newPlace);
-          }
-      })
-
+        if (typeof callback == "function") 
+            callback(places);
+          })
     .catch(function(error) {
-         console.log(error);
-    });
+        console.log(error);
+        });
+}
 
-     function addNewPlace(obj) {
-     data.push(obj);
-     updateDOM();
-    }
-
-    function updateDOM(providedData = data) {
- 
-
-    providedData.forEach(item => {
+// Define UpdateDOM function 
+function updateDOM(places) {
+    places.forEach(item => {
     const element = document.createElement('div');
     element.classList.add('col-md-4');
     element.innerHTML = `
-    <div class="card">
-    <div id="place-image"><img class="card-img-top" src="${item.imageUrl}" alt="Card image cap"></div>
-    <div class="card-body">
-        <h5 class="card-title" id="place-name">${item.name}</h5>
-        <div class="row justify-content-center">
-            <div class="col-4 card-text place-location" id="place-region">${item.region}</div>
-            <div class="col-4 card-text place-location" id="place-locality">${item.locality}</div>
-        </div>
-        <div class="card-text place-activities" id="place-tags">${item.tags} </div>
-        <div class="row justify-content-center">
-            <div class="col-4" id="place-url">
-                <a href="${item.websiteUrl}" target="_blank" class="card-link-btn btn btn-primary"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+        <div class="card">
+            <div id="place-image"><img class="card-img-top" src="${item.imageUrl}" alt="Card image cap"></div>
+            <div class="card-body">
+                <h5 class="card-title" id="place-name">${item.name}</h5>
+                <div class="row justify-content-center">
+                    <div class="col-4 card-text place-location" id="place-region">${item.region}</div>
+                    <div class="col-4 card-text place-location" id="place-locality">${item.locality}</div>
+                </div>
+                <div class="card-text place-activities" id="place-tags">${item.tags} </div>
+                <div class="row justify-content-center">
+                    <div class="col-4" id="place-url">
+                        <a href="${item.websiteUrl}" target="_blank" class="card-link-btn btn btn-primary"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="col-4" id="place-tel">
+                        <a href="tel:${item.tel}" class="card-link-btn btn btn-primary"><i class="fa fa-phone-square" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="col-4" id="place-map-location">
+                        <a href="${item.mapUrl}" target="_blank" class="card-link-btn btn btn-primary"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+                    </div> 
+                </div>
             </div>
-            <div class="col-4" id="place-tel">
-                <a href="tel:${item.tel}" class="card-link-btn btn btn-primary"><i class="fa fa-phone-square" aria-hidden="true"></i></a>
-            </div>
-            <div class="col-4" id="place-map-location">
-                <a href="${item.mapUrl}" target="_blank" class="card-link-btn btn btn-primary"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
-            </div> 
-        </div>
-    </div>
- </div>
-      `
-        cardDeck.appendChild(element);
-      });
-      
+        </div> `
+    // Add the Place  to the DOM 
+    cardDeck.appendChild(element);
+    });    
 }
-
-    
-
-
-    
-
