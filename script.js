@@ -1,14 +1,12 @@
 // Define Variables 
 
+const showAllPlaces = document.getElementById('all-places-btn');
 const cardDeck = document.getElementById('card-deck');
 const baseApiUrl = `https://failteireland.azure-api.net/opendata-api/v1/attractions`;
 
+
 // Define Places Array 
 let places = [];
-
-// call fetchData Function
-
-fetchData(baseApiUrl, updateDOM)
 
 // Define FetchData function
 function fetchData(apiUrl,callback){
@@ -59,6 +57,7 @@ function updateDOM(places) {
         tagsItems.forEach(tag => {
                    tagView = tagView + `<a class="tags-view">${tag}</a>` 
                 });
+    // insert new Places data in HTML Element
     const element = document.createElement('div');
     element.classList.add('col-md-4');
     element.innerHTML = `
@@ -86,7 +85,16 @@ function updateDOM(places) {
                 </div>
             </div>
         </div> `
-    // Add the Place  to the DOM 
+    // Add the Place to the DOM 
     cardDeck.appendChild(element);
     });    
 }
+
+
+// Add Event lisitener to show all places when all places btn clicked
+showAllPlaces.addEventListener("click", () => { 
+    // call fetchData Function and update DOM 
+    fetchData(baseApiUrl, updateDOM);
+    });
+
+
