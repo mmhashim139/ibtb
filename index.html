@@ -60,20 +60,21 @@
 	<!-- ******************************** Search Area ********************************-->
 	<div id="search-area">
     <h2> Search for a place </h2>
-		<div class="form-row">
+		<div class="form-row" id="search-form">
 			<div class=" search-input col-md-6">
-				<input type="text" class="form-control" placeholder="Name">
+				<input type="text" class="form-control" id="search-name" placeholder="Name">
             </div>
 				<div class="search-input col-md-6">
-				<input type="text" class="form-control" placeholder="Location">
+				<input type="text" class="form-control" id="search-location" placeholder="Location">
             </div>
 				<div class="search-input col-md-6">
-				<input type="text" class="form-control" placeholder="Type/Activities">
+				<input type="text" class="form-control" id="search-tag" placeholder="Type/Activities">
             </div>
 			<div class="search-button col-4">
-				<button type="submit" class="btn btn-outline-success">Find a place..</button>
+				<button type="submit" class="btn btn-outline-success" id="search-button">Find a place..</button>
 			</div>
 		</div>
+        <div class="card-deck"  id="search-reults"></div>
 	</div>
 <!-- ******************************** Separator ********************************-->
 	<div id="separator-1">
@@ -354,8 +355,9 @@
 					integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 					crossorigin="anonymous">
 				</script>
-				<!-- Javascript link-->
+				<!-- Javascript files link-->
 				<script src="script.js"></script>
+                <script src="search.js"></script>
 
 </body>
 

@@ -1,12 +1,14 @@
-// Define Variables 
-
-const showAllPlaces = document.getElementById('all-places-btn');
-const cardDeck = document.getElementById('card-deck');
-const baseApiUrl = `https://failteireland.azure-api.net/opendata-api/v1/attractions`;
+// define search form variables
+const searchName = document.getElementById('search-name');
+const searchLocation = document.getElementById('search-location');
+const searchTag = document.getElementById('search-tag');
+const searchBtn = document.getElementById('search-button');
+const searchResults = document.getElementById('search-reults');
+const searchUrl = "https://failteireland.azure-api.net/opendata-api/v1/activities?$filter=search.ismatch";
 
 
 // Define Places Array 
-let places = [];
+let searchData = [];
 
 // Define FetchData function
 function fetchData(apiUrl,callback){
@@ -37,11 +39,11 @@ function fetchData(apiUrl,callback){
 
           }
           // push the newPlace values to the places Array 
-          places.push(newPlace);
+          searchData.push(newPlace);
           }
 
         if (typeof callback == "function") 
-            callback(places);
+            callback(searchData);
           })
     .catch(function(error) {
         console.log(error);
@@ -49,8 +51,8 @@ function fetchData(apiUrl,callback){
 }
 
 // Define UpdateDOM function 
-function updateDOM(places) {
-    places.forEach(item => {
+function updateDOM(searchData) {
+    searchData.forEach(item => {
     // split tags Array in view
         let tagsItems = item.tags.split(',');
         let tagView = '';
@@ -86,15 +88,16 @@ function updateDOM(places) {
             </div>
         </div> `
     // Add the Place to the DOM 
-    cardDeck.appendChild(element);
+    searchResults.appendChild(element);
     });    
 }
 
+// add search button click event lisiner to show search reults ;
 
-// Add Event lisitener to show all places when all places btn clicked
-showAllPlaces.addEventListener("click", () => { 
-    // call fetchData Function and update DOM 
-    fetchData(baseApiUrl, updateDOM);
+searchBtn.addEventListener("click", () => { 
+        fetchData(`${searchUrl}('${searchName.value}')`, updateDOM);
+        fetchData( `${searchUrl}('${searchTag.value}')`, updateDOM);
+        fetchData(`${searchUrl}('${searchLocation.value}')`, updateDOM);
+        
     });
-
 
