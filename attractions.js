@@ -1,14 +1,12 @@
-// define search form variables
-const searchName = document.getElementById('search-name');
-const searchLocation = document.getElementById('search-location');
-const searchTag = document.getElementById('search-tag');
-const searchBtn = document.getElementById('search-button');
-const searchResults = document.getElementById('search-reults');
-const searchUrl = "https://failteireland.azure-api.net/opendata-api/v1/activities?$filter=search.ismatch";
+//define variables
 
+const castlesUrl = `https://failteireland.azure-api.net/opendata-api/v1/activities?subscription-key=&search=(%27castles%27)&$top=4`;
+const allCastles = `https://failteireland.azure-api.net/opendata-api/v1/activities?subscription-key=&search=(%27castles%27)`;
+const castles = document.getElementById('castles');
+const seeCastles = document.getElementById('more-castles');
 
 // Define Places Array 
-let searchData = [];
+let castlesData = [];
 
 // Define FetchData function
 function fetchData(apiUrl,callback){
@@ -39,11 +37,11 @@ function fetchData(apiUrl,callback){
 
           }
           // push the newPlace values to the places Array 
-          searchData.push(newPlace);
+          castlesData.push(newPlace);
           }
 
         if (typeof callback == "function") 
-            callback(searchData);
+            callback(castlesData);
           })
     .catch(function(error) {
         console.log(error);
@@ -51,8 +49,8 @@ function fetchData(apiUrl,callback){
 }
 
 // Define UpdateDOM function 
-function updateDOM(searchData) {
-    searchData.forEach(item => {
+function updateDOM(castlesData) {
+    castlesData.forEach(item => {
     // split tags Array in view
         let tagsItems = item.tags.split(',');
         let tagView = '';
@@ -61,7 +59,7 @@ function updateDOM(searchData) {
                 });
     // insert new Places data in HTML Element
     const element = document.createElement('div');
-    element.classList.add('col-md-4');
+    element.classList.add('col-md-3');
     element.innerHTML = `
         <div class="card">
             <div id="place-image"><img class="card-img-top" src="${item.imageUrl}" alt="Card image cap"></div>
@@ -88,18 +86,19 @@ function updateDOM(searchData) {
             </div>
         </div> `
     // Add the Place to the DOM 
-    searchResults.appendChild(element);
+    castles.appendChild(element);
     });    
 }
 
-// add search button click event lisiner to show search reults ;
+fetchData(castlesUrl, updateDOM);
 
-searchBtn.addEventListener("click", () => { 
-        searchResults.innerHTML = "";
-        searchData = [];
-        fetchData(`${searchUrl}('${searchName.value}')`, updateDOM);
-        fetchData( `${searchUrl}('${searchTag.value}')&$top=12`, updateDOM);
-        fetchData(`${searchUrl}('${searchLocation.value}')`, updateDOM);
-        
+// see More event listener ;
+
+seeCastles.addEventListener("click", () => { 
+    castles.innerHTML= "";
+    castlesData = [];
+    fetchData(allCastles, updateDOM);        
     });
 
+
+   
