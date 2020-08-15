@@ -1,12 +1,12 @@
 //define variables
 
-const castlesUrl = `https://failteireland.azure-api.net/opendata-api/v1/activities?subscription-key=&search=(%27castles%27)&$top=4`;
-const allCastles = `https://failteireland.azure-api.net/opendata-api/v1/activities?subscription-key=&search=(%27castles%27)`;
-const castles = document.getElementById('castles');
-const seeCastles = document.getElementById('more-castles');
+const beachesUrl = `https://failteireland.azure-api.net/opendata-api/v1/activities?subscription-key=&search=(%27beach%27)&$top=4`;
+const allBeaches = `https://failteireland.azure-api.net/opendata-api/v1/activities?subscription-key=&search=(%27beach%27)`;
+const beaches = document.getElementById('beaches');
+const seeBeaches = document.getElementById('more-beaches');
 
 // Define Places Array 
-let castlesData = [];
+let beachesData = [];
 
 // Define FetchData function
 function fetchData(apiUrl,callback){
@@ -37,11 +37,11 @@ function fetchData(apiUrl,callback){
 
           }
           // push the newPlace values to the places Array 
-          castlesData.push(newPlace);
+          beachesData.push(newPlace);
           }
 
         if (typeof callback == "function") 
-            callback(castlesData);
+            callback(beachesData);
           })
     .catch(function(error) {
         console.log(error);
@@ -49,8 +49,9 @@ function fetchData(apiUrl,callback){
 }
 
 // Define UpdateDOM function 
-function updateDOM(castlesData) {
-    castlesData.forEach(item => {
+function updateDOM(beachesData) {
+    beaches.innerHTML = "";
+    beachesData.forEach(item => {
     // split tags Array in view
         let tagsItems = item.tags.split(',');
         let tagView = '';
@@ -86,18 +87,19 @@ function updateDOM(castlesData) {
             </div>
         </div> `
     // Add the Place to the DOM 
-    castles.appendChild(element);
+    
+    beaches.appendChild(element);
     });    
 }
 
-fetchData(castlesUrl, updateDOM);
+fetchData(beachesUrl, updateDOM);
 
 // see More event listener ;
 
-seeCastles.addEventListener("click", () => { 
-    castles.innerHTML= "";
-    castlesData = [];
-    fetchData(allCastles, updateDOM);        
+seeBeaches.addEventListener("click", () => { 
+    beaches.innerHTML= "";
+    beachesData = [];
+    fetchData(allBeaches, updateDOM);        
     });
 
 
