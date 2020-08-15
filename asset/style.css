@@ -135,9 +135,6 @@ header h3 {
 
 
 
-
-
-
 #footer{
     height: 300px;
     background-color: orange;
@@ -159,3 +156,5 @@ header h3 {
 .card-img-top {
     box-sizing: border-box; 
 }
+
+
