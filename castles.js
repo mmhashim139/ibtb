@@ -1,6 +1,6 @@
 //define variables
 
-const castlesUrl = `https://failteireland.azure-api.net/opendata-api/v1/activities?subscription-key=&search=(%27castles%27)&$top=4`;
+const castlesUrl = `https://failteireland.azure-api.net/opendata-api/v1/activities?subscription-key=&search=(%27castles%27)&$top=8`;
 const allCastles = `https://failteireland.azure-api.net/opendata-api/v1/activities?subscription-key=&search=(%27castles%27)`;
 const castles = document.getElementById('castles');
 const seeCastles = document.getElementById('more-castles');
@@ -62,7 +62,7 @@ function updateDOM(castlesData) {
     const element = document.createElement('div');
     element.classList.add('col-md-3');
     element.innerHTML = `
-        <div class="card">
+        <div class="card ">
             <div id="place-image"><img class="card-img-top" src="${item.imageUrl}" alt="Card image cap"></div>
             <div class="card-body">
                 <h5 class="card-title" id="place-name">${item.name}</h5>

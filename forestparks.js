@@ -1,6 +1,6 @@
 //define variables
 
-const forestParkUrl = `https://failteireland.azure-api.net/opendata-api/v1/activities?subscription-key=&search=(%27Forest%20Park%27)&$top=4`;
+const forestParkUrl = `https://failteireland.azure-api.net/opendata-api/v1/activities?subscription-key=&search=(%27Forest%20Park%27)&$top=8`;
 const allPark = `https://failteireland.azure-api.net/opendata-api/v1/activities?subscription-key=&search=(%27Forest%20Park%27)`;
 const forestPark = document.getElementById('forest-parks');
 const seeParks = document.getElementById('more-forest-parks');
