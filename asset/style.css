@@ -107,9 +107,17 @@ header h3 {
     background-color: rgba(255, 166, 0, 0.5);
     font-size: 12px;
     display: inline-block;
-    
-    
 }
+
+.activity-tags {
+    border: 1px solid orange;
+    margin: 0 5px;
+    padding : 5px;
+    border-radius: 25px;
+    background-color: rgba(255, 166, 0, 0.5);
+    font-size: 16px;
+}
+
 
 .card-link-btn {
     background-color: rgba(0, 128, 0, 0.836);
