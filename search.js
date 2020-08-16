@@ -5,6 +5,7 @@ const searchTag = document.getElementById('search-tag');
 const searchBtn = document.getElementById('search-button');
 const searchResults = document.getElementById('search-reults');
 const searchUrl = "https://failteireland.azure-api.net/opendata-api/v1/activities?$filter=search.ismatch";
+const mainArea = document.getElementById('main-area');
 
 
 // Define Places Array 
