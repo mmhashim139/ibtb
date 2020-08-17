@@ -81,23 +81,28 @@
 
 	</div>
 	<!-- ******************************** End of Search Area ********************************-->
-<!-- ********************************  Start Main Area  ********************************-->
-    <main id="main-area">
+
 <!-- ******************************** Separator Start ********************************-->
 	<div id="separator-1"></div>
 <!-- ******************************** Separator End ********************************-->
 <!-- ******************************** Start Places Results Area ********************************-->  
 <div class="card-deck glider-contain"  id="search-reults"></div>
-<!-- ******************************** End Places Results Area ********************************-->  
+<!-- ******************************** End Places Results Area ********************************--> 
+<!-- ********************************  Start Main Area  ********************************-->
+<main id="main-area"> 
 <!-- ************************* Start of Top Activities Browsing section ************************-->
+
 <div id="top-activities">
 <!--// ****** Castles ********//-->
 	<div class="cards-section" >
 		<h2>Historic Houses and Castles</h2>
         <div class="glider-contain ">
             <div class="glider">
-            <div id="castles" class="glider-track"></div>
+                <div id="castles" class="glider-track"></div>
             </div>
+                <button aria-label="Previous" class="glider-prev">«</button>
+                <button aria-label="Next" class="glider-next">»</button>
+                <div role="tablist" class="dots"></div>
             <div class="container">
     <p class="see-more">See More <a id="more-castles" class="btn activity-tags">Castles</a></p>
     </div>
@@ -108,12 +113,15 @@
 		<h2>National and Forest Park</h2>
     <div class="glider-contain ">
         <div class="glider">
-        <div id="forest-parks" class="glider-track">
-	    </div>
+        <div id="forest-parks" class="glider-track"></div>
+        </div>
+        <button aria-label="Previous" class="glider-prev">«</button>
+        <button aria-label="Next" class="glider-next">»</button>
+        <div role="tablist" class="dots"></div>
         <div class="container">
            <p class="see-more">See More <a id="more-forest-parks" class="btn activity-tags">Forest Parks</a> </p>
         </div>
-        </div>
+        
     </div>
 	</div>
 <!--// ****** Beache ********//-->
@@ -122,9 +130,11 @@
 
     <div class="glider-contain ">
         <div class="glider">
-        <div id="beaches" class="glider-track ">
-        </div>  
+        <div id="beaches" class="glider-track "></div>  
         </div>
+        <button aria-label="Previous" class="glider-prev">«</button>
+        <button aria-label="Next" class="glider-next">»</button>
+        <div role="tablist" class="dots"></div>
 	</div>
     <div class="container">
     <p class="see-more">See More  <a id="more-beaches" class="btn activity-tags">Beach</a> </p>
@@ -442,10 +452,12 @@
 </div>
 </section>
 <!-- ******************************** End of Counties section ********************************-->
+
 <!-- ******************************** End of main Area ********************************-->
 </main>
-<!-- ******************************** Recommend a place form section ********************************-->
-<section class="contact-section">
+<!-- ******************************** Start of Recommend a place form section ********************************-->
+<section >
+<div class="contact-section">
     <div class="recommend-section" id="recommend-place">
         <h3>Would you like to recommend a place for us</h3>
         <h4>Fill the form below ..</h4>
@@ -492,9 +504,10 @@
             </div>
         </div>
     </div>
-
+</div>
 </section>	
-<!-- ******************************** About section ********************************-->
+<!-- ******************************** End of Recommend a place form section ********************************-->
+<!-- ******************************** Start About section ********************************-->
 <div id="about">
 <h3>About this website</h3>
 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, voluptate consequuntur
@@ -502,11 +515,14 @@
   aperiam reiciendis quidem quam culpa quasi expedita. Sed quisquam dolor rem debitis, placeat 
   a dignissimos, est nisi nam, voluptatibus officia velit pariatur impedit excepturi ullam!</p>
 </div>
-<!-- ******************************** Separator ********************************-->
+<!-- ******************************** End of About section ********************************-->
+<!-- ******************************** Separator Start ********************************-->
 	<div id="separator-4"></div>
-<!-- ******************************** Footer ********************************-->
+<!-- ******************************** Separator End ********************************-->
+<!-- ******************************** Footer Start ********************************-->
 <div id="footer">
 </div>
+<!-- ******************************** Footer End ********************************-->
 <!-- ******************************** Scripts Links ********************************-->
 
 <!-- Bootstrap Javascript links-->
@@ -524,20 +540,14 @@
 	</script>
 <!-- Glider slides carousel link-->
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
-
-
 <!-- Javascript files link-->
     <script src="allplaces.js"></script>
-
     <script src="beaches.js"></script>
     <script src="forestparks.js"></script>
     <script src="castles.js"></script>
-
-    <script src="search.js"></script>
-                
+    <script src="search.js"></script>     
     <script src="activities.js"></script>
     <script src="counties.js"></script>
-
 </body>
 
 </html>

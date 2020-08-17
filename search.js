@@ -53,6 +53,7 @@ function fetchData(apiUrl,callback){
 
 // Define UpdateDOM function 
 function updateDOM(searchData) {
+    mainArea.innerHTML ="";
     searchResults.innerHTML = "";
     searchData.forEach(item => {
     // split tags Array in view
@@ -92,6 +93,11 @@ function updateDOM(searchData) {
     // Add the Place to the DOM 
     searchResults.appendChild(element);
     });    
+    const backHome = document.createElement('div');
+    backHome.classList.add('row');
+    backHome.innerHTML=`
+    <a href="index.html" class="btn">Back To Home</a>`;
+    searchResults.appendChild(backHome);
 }
 
 // add search button click event lisiner to show search reults ;
