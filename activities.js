@@ -7,6 +7,7 @@ document.querySelectorAll('.activity-tags').forEach(item => {
   console.log(activityTag);
   searchData = [];
   fetchData(`${searchUrl}('${activityTag}')&$top=20`, updateDOM);
+  scroll(0,0);
   })
 })
 

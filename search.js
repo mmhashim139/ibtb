@@ -5,6 +5,7 @@ const searchTag = document.getElementById('search-tag');
 const searchBtn = document.getElementById('search-button');
 const searchResults = document.getElementById('search-reults');
 const searchUrl = "https://failteireland.azure-api.net/opendata-api/v1/activities?$filter=search.ismatch";
+const searchArea = document.getElementById('search-area')
 const mainArea = document.getElementById('main-area');
 
 
@@ -54,6 +55,7 @@ function fetchData(apiUrl,callback){
 // Define UpdateDOM function 
 function updateDOM(searchData) {
     mainArea.innerHTML ="";
+    searchArea.innerHTML="";
     searchResults.innerHTML = "";
     searchData.forEach(item => {
     // split tags Array in view
@@ -107,7 +109,6 @@ searchBtn.addEventListener("click", () => {
         fetchData(`${searchUrl}('${searchName.value}')`, updateDOM);
         fetchData( `${searchUrl}('${searchTag.value}')&$top=12`, updateDOM);
         fetchData(`${searchUrl}('${searchLocation.value}')`, updateDOM);
-        
     });
 
 

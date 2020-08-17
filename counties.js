@@ -7,5 +7,6 @@ document.querySelectorAll('.county-btn').forEach(item => {
   console.log(countyTag);
   searchData = [];
   fetchData(`${searchUrl}('${countyTag}')&$top=20`, updateDOM);
+  scroll(0,0);
   })
 })
