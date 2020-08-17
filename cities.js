@@ -91,6 +91,19 @@ function updateDOM(citiesData) {
 }
 
 
+
+
+
+
+// extract the county value by click 
+document.querySelectorAll('.county-btn').forEach(item => {
+  item.addEventListener('click', e => {
+    console.log(e.target.firstChild.nodeValue);
+    
+  })
+})
+/*
+
 // add city click event lisiner to show city places reults ;
 
 const seeCarlow = document.getElementById('see-carlow');
@@ -101,7 +114,7 @@ seeCarlow.addEventListener("click", () => {
         fetchData(carlowUrl, updateDOM);        
     });
 
-
+*/
 const seeCavan = document.getElementById('see-cavan');
 const cavanUrl = 'https://failteireland.azure-api.net/opendata-api/v1/activities?$filter=search.ismatch(%27cavan%27)';
 seeCavan.addEventListener("click", () => { 
@@ -321,3 +334,5 @@ seeWicklow.addEventListener("click", () => {
         citiesData = [];
         fetchData(wicklowUrl, updateDOM);        
     });
+
+

@@ -112,7 +112,7 @@ header h3 {
 .activity-tags {
     border: 1px solid orange;
     margin: 0 5px;
-    padding : 5px;
+    padding : 2px;
     border-radius: 25px;
     background-color: rgba(255, 166, 0, 0.5);
     font-size: 16px;
