@@ -59,7 +59,7 @@ function updateDOM(places) {
                 });
     // insert new Places data in HTML Element
     const element = document.createElement('div');
-    element.classList.add('col-md-4');
+    element.classList.add('col-md-3');
     element.innerHTML = `
         <div class="card">
             <div id="place-image"><img class="card-img-top" src="${item.imageUrl}" alt="Card image cap"></div>

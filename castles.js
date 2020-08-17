@@ -96,11 +96,6 @@ fetchData(castlesUrl, updateDOM);
 
 // see More event listener ;
 
-seeCastles.addEventListener("click", () => { 
-    castles.innerHTML= "";
-    castlesData = [];
-    fetchData(allCastles, updateDOM);        
-    });
 
 
    

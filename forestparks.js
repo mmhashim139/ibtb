@@ -96,11 +96,7 @@ fetchData(forestParkUrl, updateDOM);
 
 // see More event listener ;
 
-seeParks.addEventListener("click", () => { 
-    forestPark.innerHTML= "";
-    forestParkData = [];
-    fetchData(allPark, updateDOM);        
-    });
+
 
 
    

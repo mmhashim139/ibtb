@@ -76,7 +76,7 @@
 				<button type="submit" class="btn btn-outline-success" id="search-button">Find a place..</button>
 			</div>
 		</div>
-        <div class="card-deck glider-contain"  id="search-reults"></div>
+
 	</div>
 <!-- ******************************** Separator ********************************-->
 <main id="main-area">
@@ -85,17 +85,19 @@
 
 	</div>
 
+<!-- ******************************** Results ********************************-->  
+<div class="card-deck glider-contain"  id="search-reults"></div>
 <!-- ************************* Location Browsing section ************************-->
 	<div class="cards-section" >
 		<h2>Historic Houses and Castles</h2>
+           <div>
+    <a id="more-castles" class="btn activity-tags">Castles</a>
+    </div>
     <div class="glider-contain ">
         <div class="glider">
     <div id="castles" class="glider-track">
 	</div>
         </div>
-    </div>
-    <div>
-    <a id="more-castles" class="btn"> More Castles ..</a>
     </div>
 	</div>
 
@@ -103,14 +105,14 @@
 
 	<div class="cards-section" >
 		<h2>National and Forest Park</h2>
+    <div>
+    <a id="more-forest-parks" class="btn activity-tags">Forest Parks</a>
+    </div>
     <div class="glider-contain ">
         <div class="glider">
     <div id="forest-parks" class="glider-track">
 	</div>
         </div>
-    </div>
-    <div>
-    <a id="more-forest-parks" class="btn"> More Forest Park ..</a>
     </div>
 	</div>
 
@@ -118,15 +120,16 @@
 
 	<div class="cards-section" >
 		<h2>Beaches ..</h2>
+    <div>
+    <a id="more-beaches" class="btn activity-tags">Beach</a>
+    </div>
     <div class="glider-contain ">
         <div class="glider">
-    <div id="card-deck" class="glider-track ">
+    <div id="beaches" class="glider-track ">
     </div>
         </div>
 	</div>
-    <div>
-    <a id="more-beaches" class="btn"> More Beaches ..</a>
-    </div>
+
 	</div>
 <!-- ******************************** Separator ********************************-->
 	<div id="separator-2">
@@ -494,13 +497,16 @@
 
 				<!-- Javascript files link-->
                 <script src="allplaces.js"></script>
-                <script src="activities.js"></script>
+
                  <script src="beaches.js"></script>
-                <script src="search.js"></script>
-                <script src="castles.js"></script>
                 <script src="forestparks.js"></script>
-               
-                <script src="cities.js"></script>
+                <script src="castles.js"></script>
+
+                <script src="search.js"></script>
+                
+                <script src="activities.js"></script>
+                <script src="counties.js"></script>
+
                 
 
 

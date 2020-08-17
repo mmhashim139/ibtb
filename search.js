@@ -53,6 +53,7 @@ function fetchData(apiUrl,callback){
 
 // Define UpdateDOM function 
 function updateDOM(searchData) {
+    searchResults.innerHTML = "";
     searchData.forEach(item => {
     // split tags Array in view
         let tagsItems = item.tags.split(',');
@@ -62,7 +63,7 @@ function updateDOM(searchData) {
                 });
     // insert new Places data in HTML Element
     const element = document.createElement('div');
-    element.classList.add('col-md-4');
+    element.classList.add('col-md-3');
     element.innerHTML = `
         <div class="card">
             <div id="place-image"><img class="card-img-top" src="${item.imageUrl}" alt="Card image cap"></div>
@@ -96,11 +97,11 @@ function updateDOM(searchData) {
 // add search button click event lisiner to show search reults ;
 
 searchBtn.addEventListener("click", () => { 
-        searchResults.innerHTML = "";
         searchData = [];
         fetchData(`${searchUrl}('${searchName.value}')`, updateDOM);
         fetchData( `${searchUrl}('${searchTag.value}')&$top=12`, updateDOM);
         fetchData(`${searchUrl}('${searchLocation.value}')`, updateDOM);
         
     });
+
 
