@@ -2,7 +2,7 @@
 
 const showAllPlaces = document.getElementById('all-places-btn');
 const cardDeck = document.getElementById('card-deck');
-const baseApiUrl = `https://failteireland.azure-api.net/opendata-api/v1/activities?$top=60`;
+const baseApiUrl = `https://failteireland.azure-api.net/opendata-api/v1/activities`;
 
 
 // Define Places Array 
@@ -87,15 +87,12 @@ function updateDOM(places) {
         </div> `
     // Add the Place to the DOM 
     cardDeck.appendChild(element);
-    });    
+    }); 
+    const backHome = document.createElement('div');
+    backHome.classList.add('container');
+    backHome.innerHTML=`
+    <a href="index.html" class="btn">Back To Home</a>`;
+    cardDeck.appendChild(backHome);   
 }
 
-
-// Add Event lisitener to show all places when all places btn clicked
-/*
-showAllPlaces.addEventListener("click", () => { 
-    // call fetchData Function and update DOM 
-    fetchData(baseApiUrl, updateDOM);
-    });
-
-*/
+fetchData(baseApiUrl, updateDOM);
