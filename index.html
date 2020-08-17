@@ -21,7 +21,7 @@
 
 <body>
 
-	<!-- ******************************** Menue Bar ********************************-->
+	<!-- ******************************** Start Menu Bar ********************************-->
 	<div >
 		<div class="header-area">
 			<nav class="navbar navbar-expand-xl navbar-light ">
@@ -51,7 +51,8 @@
 			</nav>
 		</div>
 	</div>
-	<!-- ******************************** Header Area ********************************-->
+    <!-- ******************************** End of Menu Bar ********************************-->
+	<!-- ******************************** Start Header Area ********************************-->
 	<header>
 		<h1>Ireland Best Places to Be ..</h1>
 		<h3>Find best places in Ireland</h3>
@@ -59,7 +60,8 @@
 		    <a class="btn btn-outline-success"> Find a place</a>
         </h3>
 	</header>
-	<!-- ******************************** Search Area ********************************-->
+	<!-- ****************************** End of Header Area ********************************-->
+	<!-- ******************************** Start Search Area ********************************-->
 	<div id="search-area">
     <h2> Search for a place </h2>
 		<div class="form-row" id="search-form">
@@ -78,71 +80,64 @@
 		</div>
 
 	</div>
-<!-- ******************************** Separator ********************************-->
-<main id="main-area">
-	<div id="separator-1">
-
-
-	</div>
-
-<!-- ******************************** Places Results ********************************-->  
+	<!-- ******************************** End of Search Area ********************************-->
+<!-- ********************************  Start Main Area  ********************************-->
+    <main id="main-area">
+<!-- ******************************** Separator Start ********************************-->
+	<div id="separator-1"></div>
+<!-- ******************************** Separator End ********************************-->
+<!-- ******************************** Start Places Results Area ********************************-->  
 <div class="card-deck glider-contain"  id="search-reults"></div>
-
-<!-- ************************* Location Browsing section ************************-->
-<!--///////////////////////////////////////-->
+<!-- ******************************** End Places Results Area ********************************-->  
+<!-- ************************* Start of Top Activities Browsing section ************************-->
+<div id="top-activities">
+<!--// ****** Castles ********//-->
 	<div class="cards-section" >
 		<h2>Historic Houses and Castles</h2>
-           <div>
-    <a id="more-castles" class="btn activity-tags">Castles</a>
+        <div class="glider-contain ">
+            <div class="glider">
+            <div id="castles" class="glider-track"></div>
+            </div>
+            <div class="container">
+    <p class="see-more">See More <a id="more-castles" class="btn activity-tags">Castles</a></p>
     </div>
-    <div class="glider-contain ">
-        <div class="glider">
-    <div id="castles" class="glider-track">
-	</div>
         </div>
-    </div>
 	</div>
-
-<!--///////////////////////////////////////-->
-
+<!--// ****** Forest Park ********//-->
 	<div class="cards-section" >
 		<h2>National and Forest Park</h2>
-    <div>
-    <a id="more-forest-parks" class="btn activity-tags">Forest Parks</a>
-    </div>
     <div class="glider-contain ">
         <div class="glider">
-    <div id="forest-parks" class="glider-track">
-	</div>
+        <div id="forest-parks" class="glider-track">
+	    </div>
+        <div class="container">
+           <p class="see-more">See More <a id="more-forest-parks" class="btn activity-tags">Forest Parks</a> </p>
+        </div>
         </div>
     </div>
 	</div>
-
-<!--///////////////////////////////////////-->
-
+<!--// ****** Beache ********//-->
 	<div class="cards-section" >
 		<h2>Beaches ..</h2>
-    <div>
-    <a id="more-beaches" class="btn activity-tags">Beach</a>
-    </div>
+
     <div class="glider-contain ">
         <div class="glider">
-    <div id="beaches" class="glider-track ">
-    </div>
+        <div id="beaches" class="glider-track ">
+        </div>  
         </div>
 	</div>
-
+    <div class="container">
+    <p class="see-more">See More  <a id="more-beaches" class="btn activity-tags">Beach</a> </p>
+    </div>
 	</div>
-
-
-<!-- ******************************** Separator ********************************-->
-	<div id="separator-2">
-
-
-	</div>
-<!-- ******************************** Activities section ********************************-->
-
+</div>
+<!-- ************************* End of Top Activities Browsing section ************************-->
+<!-- ******************************** Separator Start ********************************-->
+	<div id="separator-2"></div>
+<!-- ******************************** Separator End ********************************-->
+<!-- ******************************** Start Activities Tags section ********************************-->
 <section >
+<div id="activities-tag-section">
   <h2>More Activities</h2>
         <div class="glider" id="activity-glider" >
             <div class="glider-track">
@@ -218,19 +213,17 @@
                         <button href="#" class="activity-tags">Stadium</button>
     </div>
 </div>
-<div id="activity-section" class="card-deck"></div>
+</div>
 </section>
-
-<!-- ******************************** Separator ********************************-->
-	<div id="separator-3">
-
-
-	</div>
-<!-- ******************************** Counties section ********************************-->
+<!-- ******************************** End of Activities Tags section ********************************-->
+<!-- ******************************** Separator  Start ********************************-->
+	<div id="separator-3"></div>
+<!-- ******************************** Separator  End ********************************-->
+<!-- ******************************** Start of Counties section ********************************-->
 <section>
+<div id="counties-section">
   <h2>Find a place by county</h2>
   <div class="container cities">
-
     <div class="glider-contain ">
     <div class="glider ">
     <div class="glider-track">
@@ -445,9 +438,11 @@
     </div>
     </div>
     </div>
-<div id="city-places" class="card-deck"></div>
   </div>
+</div>
 </section>
+<!-- ******************************** End of Counties section ********************************-->
+<!-- ******************************** End of main Area ********************************-->
 </main>
 <!-- ******************************** Recommend a place form section ********************************-->
 <section class="contact-section">
@@ -498,15 +493,8 @@
         </div>
     </div>
 
-</section>
-<!--           ///////////////////////            -->
-
-		
-	
-
-
+</section>	
 <!-- ******************************** About section ********************************-->
-
 <div id="about">
 <h3>About this website</h3>
 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, voluptate consequuntur
@@ -514,50 +502,41 @@
   aperiam reiciendis quidem quam culpa quasi expedita. Sed quisquam dolor rem debitis, placeat 
   a dignissimos, est nisi nam, voluptatibus officia velit pariatur impedit excepturi ullam!</p>
 </div>
-
 <!-- ******************************** Separator ********************************-->
-	<div id="separator-4">
-
-
-	</div>
-
+	<div id="separator-4"></div>
 <!-- ******************************** Footer ********************************-->
 <div id="footer">
-
 </div>
+<!-- ******************************** Scripts Links ********************************-->
+
+<!-- Bootstrap Javascript links-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous">
+		</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous">
+	</script>
+<!-- Glider slides carousel link-->
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
 
 
-				<!-- Bootstrap Javascript links-->
-				<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-					integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-					crossorigin="anonymous">
-				</script>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-					integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-					crossorigin="anonymous">
-				</script>
-				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-					integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-					crossorigin="anonymous">
-				</script>
-                <!-- Glider slides carousel link-->
-                  <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+<!-- Javascript files link-->
+    <script src="allplaces.js"></script>
 
+    <script src="beaches.js"></script>
+    <script src="forestparks.js"></script>
+    <script src="castles.js"></script>
 
-				<!-- Javascript files link-->
-                <script src="allplaces.js"></script>
-
-                 <script src="beaches.js"></script>
-                <script src="forestparks.js"></script>
-                <script src="castles.js"></script>
-
-                <script src="search.js"></script>
+    <script src="search.js"></script>
                 
-                <script src="activities.js"></script>
-                <script src="counties.js"></script>
-
-                
-
+    <script src="activities.js"></script>
+    <script src="counties.js"></script>
 
 </body>
 

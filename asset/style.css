@@ -99,7 +99,7 @@ header h3 {
     height: 150px;
 }
 
-.tags-view {
+.tags-view  {
     border: 1px solid orange;
     border-radius: 25px;
     margin: 3px;
@@ -124,6 +124,10 @@ header h3 {
 
 }
 
+.see-more{
+    font-size: 22px;
+    margin-right: 5%;
+}
 .card-link-btn {
     background-color: rgba(0, 128, 0, 0.836);
     height: 40px;;
