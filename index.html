@@ -10,10 +10,10 @@
 		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<!-- FontAwesome Links-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<!-- CSS file Links-->
-	<link rel="stylesheet" href="asset/style.css">
     <!-- Glider CSS File -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+    <!-- CSS file Links-->
+	<link rel="stylesheet" href="asset/style.css">
 
 	<title>Ireland Best To Be</title>
 
@@ -120,7 +120,7 @@
 		<h2>Beaches ..</h2>
     <div class="glider-contain ">
         <div class="glider">
-    <div id="beaches" class="glider-track">
+    <div id="card-deck" class="glider-track ">
     </div>
         </div>
 	</div>
@@ -135,84 +135,80 @@
 	</div>
 <!-- ******************************** Activities section ********************************-->
 
-<section>
+<section >
   <h2>More Activities</h2>
-<div class="container activities">
-    <div class="glider-contain ">
-        <div class="glider">
+        <div class="glider" id="activity-glider" >
             <div class="glider-track">
-                        <a href="#" class="activity-tags" >Activity Operator</a>
-                        <a href="#" class="activity-tags" >Food and Drink</a>
-                        <a href="#" class="activity-tags" >Restaurant</a>
-                        <a href="#"  class="activity-tags" >Pubs and Bar</a>
-                        <a href="#" class="activity-tags" >Seafood</a>
-                        <a href="#"  class="activity-tags">Vegetarian</a>
-                        <a href="#"  class="activity-tags">Craft</a>
-                        <a href="#" class="activity-tags">Shopping</a>
-                        <a href="#" class="activity-tags">Art Gallery</a>
-                        <a href="#"  class="activity-tags">Museums and Attraction</a>
-                        <a href="#"  class="activity-tags">Historic Houses and Castle</a>
-                        <a href="#" class="activity-tags">Venue</a>
-                        <a href="#"  class="activity-tags">Fishing</a>
-                        <a href="#" class="activity-tags">Angling</a>
-                        <a href="#"  class="activity-tags">Fine Dining</a>
-                        <a href="#" class="activity-tags" >Surfing</a>
-                        <a href="#" class="activity-tags">Pitch And Putt</a>
-                        <a href="#"  class="activity-tags">Photography</a>
-                        <a href="#"  class="activity-tags">Learning</a>
-                        <a href="#"  class="activity-tags">Church Abbey</a>
-                        <a href="#"  class="activity-tags">Monastery</a>
-                        <a href="#"  class="activity-tags">Ruins</a>
-                        <a href="#"  class="activity-tags" >Golf</a>
-                        <a href="#" class="activity-tags">Tracing Your Ancestors</a>
-                        <a href="#" class="activity-tags">Cafe</a>
-                        <a href="#" class="activity-tags">Cycling</a>
-                        <a href="#" class="activity-tags">Kitesurfing</a>
-                        <a href="#"  class="activity-tags">Windsurfing</a>
-                        <a href="#" class="activity-tags">Bike Rental</a>
-                        <a href="#"  class="activity-tags">Island</a>
-                        <a href="#" class="activity-tags">Bird Watching</a>
-                        <a href="#"  class="activity-tags">Climbing</a>
-                        <a href="#"  class="activity-tags">Horse Riding</a>
-                        <a href="#" class="activity-tags">Beach</a>
-                        <a href="#"  class="activity-tags">Pampering</a>
-                        <a href="#"  class="activity-tags">Health Farm</a>
-                        <a href="#" class="activity-tags">Spa and Wellness</a>
-                        <a href="#"  class="activity-tags">Specialised Retreat</a>
-                        <a href="#" class="activity-tags">Kayaking</a>
-                        <a href="#"  class="activity-tags">Sailing</a>
-                        <a href="#"  class="activity-tags">Covid Safety Charter</a>
-                        <a href="#"  class="activity-tags">Coach</a>
-                        <a href="#"  class="activity-tags">Road</a>
-                        <a href="#"  class="activity-tags">Agriculture</a>
-                        <a href="#"  class="activity-tags">Falconry</a>
-                        <a href="#"  class="activity-tags">Visitor Farm</a>
-                        <a href="#"  class="activity-tags">Local Produce</a>
-                        <a href="#"  class="activity-tags">Embarkation Point</a>
-                        <a href="#" class="activity-tags">Marina</a>
-                        <a href="#" class="activity-tags">Swimming</a>
-                        <a href="#"  class="activity-tags">Literary Ireland</a>
-                        <a href="#"  class="activity-tags">Equestrian</a>
-                        <a href="#" class="activity-tags">Cruising</a>
-                        <a href="#" class="activity-tags">Boat</a>
-                        <a href="#"  class="activity-tags">Race Course</a>
-                        <a href="#"  class="activity-tags">GAA</a>
-                        <a href="#"  class="activity-tags">Fitness and Leisure</a>
-                        <a href="#" class="activity-tags">Comedy</a>
-                        <a href="#" class="activity-tags">Zip Lining</a>
-                        <a href="#"  class="activity-tags">Movies</a>
-                        <a href="#"  class="activity-tags">Cinema</a>
-                        <a href="#"  class="activity-tags">Public Sculpture</a>
-                        <a href="#"  class="activity-tags">River</a>
-                        <a href="#"  class="activity-tags">Artisan</a>
-                        <a href="#" class="activity-tags">Cooking</a>
-                        <a href="#" class="activity-tags">Cookery</a>
-                        <a href="#"  class="activity-tags">Traditionally Irish</a>
-                        <a href="#"  class="activity-tags">Zoos and Aquarium</a>
-                        <a href="#" class="activity-tags">Vegan</a>
-                        <a href="#" class="activity-tags">Stadium</a>
-            </div>
-        </div>
+                        <button href="#" class="activity-tags" >Activity Operator</button>
+                        <button href="#" class="activity-tags" >Food and Drink</button>
+                        <button href="#" class="activity-tags" >Restaurant</button>
+                        <button href="#"  class="activity-tags" >Pubs and Bar</button>
+                        <button href="#" class="activity-tags" >Seafood</button>
+                        <button href="#"  class="activity-tags">Vegetarian</button>
+                        <button href="#"  class="activity-tags">Craft</button>
+                        <button href="#" class="activity-tags">Shopping</button>
+                        <button href="#" class="activity-tags">Art Gallery</button>
+                        <button href="#"  class="activity-tags">Museums and Attraction</button>
+                        <button href="#"  class="activity-tags">Historic Houses and Castle</button>
+                        <button href="#" class="activity-tags">Venue</button>
+                        <button href="#"  class="activity-tags">Fishing</button>
+                        <button href="#" class="activity-tags">Angling</button>
+                        <button href="#"  class="activity-tags">Fine Dining</button>
+                        <button href="#" class="activity-tags" >Surfing</button>
+                        <button href="#" class="activity-tags">Pitch And Putt</button>
+                        <button href="#"  class="activity-tags">Photography</button>
+                        <button href="#"  class="activity-tags">Learning</button>
+                        <button href="#"  class="activity-tags">Church Abbey</button>
+                        <button href="#"  class="activity-tags">Monastery</button>
+                        <button href="#"  class="activity-tags">Ruins</button>
+                        <button href="#"  class="activity-tags" >Golf</button>
+                        <button href="#" class="activity-tags">Tracing Your Ancestors</button>
+                        <button href="#" class="activity-tags">Cafe</button>
+                        <button href="#" class="activity-tags">Cycling</button>
+                        <button href="#" class="activity-tags">Kitesurfing</button>
+                        <button href="#"  class="activity-tags">Windsurfing</button>
+                        <button href="#" class="activity-tags">Bike Rental</button>
+                        <button href="#"  class="activity-tags">Island</button>
+                        <button href="#" class="activity-tags">Bird Watching</button>
+                        <button href="#"  class="activity-tags">Climbing</button>
+                        <button href="#"  class="activity-tags">Horse Riding</button>
+                        <button href="#" class="activity-tags">Beach</button>
+                        <button href="#"  class="activity-tags">Pampering</button>
+                        <button href="#"  class="activity-tags">Health Farm</button>
+                        <button href="#" class="activity-tags">Spa and Wellness</button>
+                        <button href="#"  class="activity-tags">Specialised Retreat</button>
+                        <button href="#" class="activity-tags">Kayaking</button>
+                        <button href="#"  class="activity-tags">Sailing</button>
+                        <button href="#"  class="activity-tags">Covid Safety Charter</button>
+                        <button href="#"  class="activity-tags">Coach</button>
+                        <button href="#"  class="activity-tags">Road</button>
+                        <button href="#"  class="activity-tags">Agriculture</button>
+                        <button href="#"  class="activity-tags">Falconry</button>
+                        <button href="#"  class="activity-tags">Visitor Farm</button>
+                        <button href="#"  class="activity-tags">Local Produce</button>
+                        <button href="#"  class="activity-tags">Embarkation Point</button>
+                        <button href="#" class="activity-tags">Marina</button>
+                        <button href="#" class="activity-tags">Swimming</button>
+                        <button href="#"  class="activity-tags">Literary Ireland</button>
+                        <button href="#"  class="activity-tags">Equestrian</button>
+                        <button href="#" class="activity-tags">Cruising</button>
+                        <button href="#" class="activity-tags">Boat</button>
+                        <button href="#"  class="activity-tags">Race Course</button>
+                        <button href="#"  class="activity-tags">GAA</button>
+                        <button href="#"  class="activity-tags">Fitness and Leisure</button>
+                        <button href="#" class="activity-tags">Comedy</button>
+                        <button href="#" class="activity-tags">Zip Lining</button>
+                        <button href="#"  class="activity-tags">Movies</button>
+                        <button href="#"  class="activity-tags">Cinema</button>
+                        <button href="#"  class="activity-tags">Public Sculpture</button>
+                        <button href="#"  class="activity-tags">River</button>
+                        <button href="#"  class="activity-tags">Artisan</button>
+                        <button href="#" class="activity-tags">Cooking</button>
+                        <button href="#" class="activity-tags">Cookery</button>
+                        <button href="#"  class="activity-tags">Traditionally Irish</button>
+                        <button href="#"  class="activity-tags">Zoos and Aquarium</button>
+                        <button href="#" class="activity-tags">Vegan</button>
+                        <button href="#" class="activity-tags">Stadium</button>
     </div>
 </div>
 <div id="activity-section" class="card-deck"></div>
@@ -497,12 +493,15 @@
 
 
 				<!-- Javascript files link-->
-				<script src="script.js"></script>
+                <script src="allplaces.js"></script>
+                <script src="activities.js"></script>
+                 <script src="beaches.js"></script>
                 <script src="search.js"></script>
                 <script src="castles.js"></script>
                 <script src="forestparks.js"></script>
-                <script src="beaches.js"></script>
+               
                 <script src="cities.js"></script>
+                
 
 
 </body>

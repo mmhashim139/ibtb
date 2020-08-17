@@ -114,7 +114,7 @@ seeCarlow.addEventListener("click", () => {
         fetchData(carlowUrl, updateDOM);        
     });
 
-*/
+
 const seeCavan = document.getElementById('see-cavan');
 const cavanUrl = 'https://failteireland.azure-api.net/opendata-api/v1/activities?$filter=search.ismatch(%27cavan%27)';
 seeCavan.addEventListener("click", () => { 
@@ -335,4 +335,4 @@ seeWicklow.addEventListener("click", () => {
         fetchData(wicklowUrl, updateDOM);        
     });
 
-
+*/

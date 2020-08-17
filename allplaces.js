@@ -92,9 +92,10 @@ function updateDOM(places) {
 
 
 // Add Event lisitener to show all places when all places btn clicked
+/*
 showAllPlaces.addEventListener("click", () => { 
     // call fetchData Function and update DOM 
     fetchData(baseApiUrl, updateDOM);
     });
 
-
+*/
