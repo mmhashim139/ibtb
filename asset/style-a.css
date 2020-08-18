@@ -1,0 +1,15 @@
+/* Import Google font */
+@import url('https://fonts.googleapis.com/css?family=Lato|Taviraj&display=swap');
+
+
+
+/* ======== Style Header Area ====== ===*/
+
+header {
+    background-image: url(../images/header-a.jpg) ;
+	text-align: center;
+	width: 100%;
+    height: 95vh;
+	background-size: cover;
+	position: relative;
+}

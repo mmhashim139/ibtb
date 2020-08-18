@@ -2,15 +2,15 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Taviraj&display=swap');
 
 
-*{
-    padding: 5px;
-}
-
 
 /* === ================= ===*/
 header {
-    height: 70vh;
-    background-color: rgba(88, 236, 88, 0.425);
+    background-image: url(../images/header-a.jpg) ;
+	text-align: center;
+	width: 100%;
+    height: 95vh;
+	background-size: cover;
+	position: relative;
 }
 
 header h1 {
@@ -71,6 +71,12 @@ header h3 {
 
 .cards-section .card-deck {
     padding: 10px;
+}
+
+.place-card{
+    max-width: 500px;
+    min-width: 250px;
+    margin: 10px;
 }
 
 .card {
@@ -158,10 +164,25 @@ header h3 {
     background-color: orange;
 }
 
-#separator-1 ,#separator-2 ,#separator-3 ,#separator-4 {
-    height: 100px;
-    background-color: rgba(88, 236, 88, 0.425);
+#separator-1 {
+    background-image: url(../images/separator-a.jpg) ;
+	width: 100%;
+    height: 50vh;
+	background-size: cover;
 }
+#separator-2 {
+    background-image: url(../images/separator-b.jpg) ;
+	width: 100%;
+    height: 50vh;
+	background-size: cover;
+}
+#separator-3 {
+    background-image: url(../images/separator-c.jpg) ;
+	width: 100%;
+    height: 50vh;
+	background-size: cover;
+}
+
 
 
 
@@ -172,7 +193,10 @@ header h3 {
 }
 
 .card-img-top {
-    box-sizing: border-box; 
+    background-color: white;
+    height: 90px; width: 90px;
+    border-radius: 100%;
+    align-content: center;
 }
 
 

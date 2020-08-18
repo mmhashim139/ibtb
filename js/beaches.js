@@ -1,12 +1,12 @@
-// Define Variables 
+//define variables
 
-const showAllPlaces = document.getElementById('all-places-btn');
-const cardDeck = document.getElementById('card-deck');
-const baseApiUrl = `https://failteireland.azure-api.net/opendata-api/v1/activities`;
-
+const beachesUrl = `https://failteireland.azure-api.net/opendata-api/v1/activities?subscription-key=&search=(%27beach%27)&$top=8`;
+const allBeaches = `https://failteireland.azure-api.net/opendata-api/v1/activities?subscription-key=&search=(%27beach%27)`;
+const beaches = document.getElementById('beaches');
+const seeBeaches = document.getElementById('more-beaches');
 
 // Define Places Array 
-let places = [];
+let beachesData = [];
 
 // Define FetchData function
 function fetchData(apiUrl,callback){
@@ -22,7 +22,6 @@ function fetchData(apiUrl,callback){
         for (i = 0 ; i< data.results.length ; i++) {
             
           // Define Place Values from the API
-
           const newPlace = {
               name : `${data.results[i].name}`,
               imageUrl : `${data.results[i].image.url}`,
@@ -33,15 +32,12 @@ function fetchData(apiUrl,callback){
               locality : `${data.results[i].address.addressLocality}`,
               tags : `${data.results[i].tags}`, 
               mapUrl : `http://www.google.com/maps/place/${data.results[i].geo.latitude},${data.results[i].geo.longitude}`,
-
-
           }
           // push the newPlace values to the places Array 
-          places.push(newPlace);
+          beachesData.push(newPlace);
           }
-
         if (typeof callback == "function") 
-            callback(places);
+            callback(beachesData);
           })
     .catch(function(error) {
         console.log(error);
@@ -49,8 +45,8 @@ function fetchData(apiUrl,callback){
 }
 
 // Define UpdateDOM function 
-function updateDOM(places) {
-    places.forEach(item => {
+function updateDOM(beachesData) {
+    beachesData.forEach(item => {
     // split tags Array in view
         let tagsItems = item.tags.split(',');
         let tagView = '';
@@ -59,10 +55,10 @@ function updateDOM(places) {
                 });
     // insert new Places data in HTML Element
     const element = document.createElement('div');
-    element.classList.add('col-md-3');
+    element.classList.add('place-card');
     element.innerHTML = `
         <div class="card">
-            <div id="place-image"><img class="card-img-top" src="${item.imageUrl}" alt="Card image cap"></div>
+            <!-- <div id="place-image"><img class="card-img-top" src="images/failte-logo.jpg" alt="Card image cap"></div> -->
             <div class="card-body">
                 <h5 class="card-title" id="place-name">${item.name}</h5>
                 <div class="row justify-content-center">
@@ -86,13 +82,11 @@ function updateDOM(places) {
             </div>
         </div> `
     // Add the Place to the DOM 
-    cardDeck.appendChild(element);
-    }); 
-    const backHome = document.createElement('div');
-    backHome.classList.add('container');
-    backHome.innerHTML=`
-    <a href="index.html" class="btn">Back To Home</a>`;
-    cardDeck.appendChild(backHome);   
+    
+    beaches.appendChild(element);
+    });    
 }
 
-fetchData(baseApiUrl, updateDOM);
+fetchData(beachesUrl, updateDOM);
+
+// see More event listener ;
