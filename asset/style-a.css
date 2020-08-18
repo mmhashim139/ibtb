@@ -85,3 +85,55 @@
     border-radius: 20px;
     transform: scale(1.1);
 }
+
+/* ======== End of Style Header Area ====== ===*/
+
+/* ======== Style Search Area ====== ===*/
+
+.search-area {
+    margin-bottom: 40px;
+}
+.search-form {
+    margin : 20px 0px;
+    padding : 5px;
+}
+
+.search-area h2 {
+    margin-top: 20px ;
+    padding: 10px 10px;
+    font-size: 32px;
+    font-family: 'Taviraj',sans-serif;
+    font-weight: bold;
+    color: rgb(255, 121, 0); 
+}
+
+.search-area .form-control {
+    margin: 5px 0px ;
+    height: 50px;
+    border: 0.5px solid rgb(255, 121, 0);
+    border-radius: 20px;
+}
+.search-input , .search-submit {
+    padding : 3px;
+}
+.search-area .search-button   {
+    margin: 5px 0px ;
+    height: 50px;
+    background-color:rgb(1, 154, 74);
+    color:  white ;
+    font-size: 16px;
+    font-family: 'Taviraj', sans-serif;
+    border-radius: 20px;
+}
+.search-area .search-button:hover   {
+    margin: 5px 0px ;
+    height: 50px;
+    background-color:rgb(255, 121, 0);
+    color:  white ;
+    font-size: 16px;
+    font-family: 'Taviraj', sans-serif;
+    border-radius: 20px;
+}
+
+/* ======== End of Style Search Area ====== ===*/
+
