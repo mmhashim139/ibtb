@@ -24,10 +24,10 @@ and provide details of each place like
 This info can be found by search or browsing the top activities in Home page .
 
 
-[Mockup-Desktop-home-page](Mockups/Desktop Vs Home page.png) 
-[Desktop-Vs-Search-Results](Mockups/Desktop Vs Home page.png) 
-[Mockup-Mobile-home-page](Mockups/Mobile Vs. home page.png) 
-[Mockup-Desktop-home-page](Mockups/Mockups/Desktop Vs Home page.png) 
+- [Mockup-Desktop-home-page](mockups/desktop-vs-home-page.png)
+- [Desktop-Vs-Search-Results](mockups/desktop-vs-search-results.png) 
+- [Mockup-Mobile-home-page](mockups/mobile-vs-home-page.png) 
+- [Mockup-Desktop-home-page](mockups/mobile-vs-search-results.png) 
 
 
 #### User Stories
