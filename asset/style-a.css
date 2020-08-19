@@ -373,7 +373,6 @@
     font-size: 16px;
     font-family: 'Taviraj', sans-serif;
     border-radius: 20px;
-
 }
 
 /*=========   End of Recommend place form Section =========*/
@@ -382,23 +381,22 @@
 #about{
     margin: 80px 0px;
 }
-
-.about-header {
-
-    font-size: 46px;
-    font-family: 'Taviraj',sans-serif;
-    font-weight: bold;
-    color: rgb(255, 121, 0);
-    text-align: center;
-}
-
-.about-website p {
+.about-text {
     padding: 5px 0px;
     font-size: 21px;
     font-family: 'Taviraj',sans-serif;
     font-weight: normal;
     text-align: center;
 }
+.about-header {
+
+    font-size: 36px;
+    font-family: 'Taviraj',sans-serif;
+    font-weight: bold;
+    color: rgb(255, 121, 0);
+    text-align: center;
+}
+
 
 
 /*=========   End of about Section =========*/
@@ -439,4 +437,76 @@
 }
 .search-bk-obtion{
     margin: 0px 7%;
+}
+
+/*=========   Footer Style  =========*/
+
+.footer-section {
+    margin-top: 50px;
+    padding-top: 22px;
+    background-color:rgb(1, 154, 74 ,0.7);
+    background-size: cover;
+
+}
+.footer-header{
+    padding: 10px 10px;
+    font-size: 36px;
+    font-family: 'Taviraj',sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.footer-info {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Lato',sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.footer-btn{
+    display: inline-block;
+    font-size: 24px;
+    background-color: rgba(255, 166, 0);
+    color: white;
+    margin: 5px 5px;
+    padding: 10px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+.footer-btn:hover{
+    font-weight: bold;
+    background-color: rgba(255, 166, 0);
+    color: white;
+    transform: scale(1.1);
+    margin: 5px 5px;
+    padding: 10px;
+    border-radius: 25px;
+    text-decoration: none;
+
+}
+
+
+
+.social-btn{
+    font-size: 24px;
+    background-color: rgba(255, 166, 0);
+    color: white;
+    padding: 10px;
+    width: 50px;
+    border-radius: 100%;
+}
+.social-btn:hover {
+    font-weight: bold;
+    background-color: rgba(255, 166, 0);
+    color: white;
+    transform: scale(1.1);
+    padding: 10px;
+    width: 50px;
+    border-radius: 100%;
+}
+
+.copyrights{
+    color: white;
 }
