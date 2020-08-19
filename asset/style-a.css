@@ -311,3 +311,96 @@
 
 /*=========   End of Style Activities & Counties Section =========*/
 
+/*=========   Recommend place form Section =========*/
+
+.recommend-section {
+    padding: 5px 0px;
+    margin: 45px 0px;
+    font-size: 21px;
+    font-family: 'Taviraj',sans-serif;
+    font-weight: normal;
+    color: rgb(1, 154, 74); 
+    text-align: center;
+}
+
+.modal-header{
+    justify-content: center;
+    text-align: center;
+    margin: 5px 0px;
+}
+
+.modal-title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 21px;
+    color: rgb(1, 154, 74); 
+}
+
+.recommend-btn  {
+    margin: 50px 0px;
+    padding: 15px;
+    background-color:rgb(1, 154, 74);
+    color:  white ;
+    font-size: 16px;
+    font-family: 'Taviraj', sans-serif;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+
+.recommend-btn:hover , .f-btn:hover{
+    padding: 15px;
+    background-color: rgb(255, 121, 0);
+    color: white;
+    font-size: 16px;
+    font-family: 'Taviraj', sans-serif;
+    border-radius: 20px;
+    text-decoration: none;
+    transform: scale(1.1);
+}
+.f-btn {
+    padding: 10px;
+    background-color:rgb(1, 154, 74);
+    color:  white ;
+    font-size: 16px;
+    font-family: 'Taviraj', sans-serif;
+    border-radius: 20px;
+}
+.f-btn:hover{
+    padding: 10px;
+    background-color: rgb(255, 121, 0);
+    color: white;
+    font-size: 16px;
+    font-family: 'Taviraj', sans-serif;
+    border-radius: 20px;
+
+}
+
+/*=========   End of Recommend place form Section =========*/
+
+/*=========   About Section =========*/
+#about{
+    margin: 80px 0px;
+}
+
+.about-header {
+
+    font-size: 46px;
+    font-family: 'Taviraj',sans-serif;
+    font-weight: bold;
+    color: rgb(255, 121, 0);
+    text-align: center;
+}
+
+.about-website p {
+    padding: 5px 0px;
+    font-size: 21px;
+    font-family: 'Taviraj',sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+
+
+
+
+
