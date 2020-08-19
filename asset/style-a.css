@@ -1,12 +1,10 @@
 /* Import Google font */
 @import url('https://fonts.googleapis.com/css?family=Lato|Taviraj&display=swap');
 
-
-
 /* ======== Style Header Area ====== ===*/
 
 .hero-image{
-    background-image:  linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),url("../images/header-c.jpg");
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.25),rgb(1, 154, 74 ,0.25)),url("../images/header-c.jpg");
     height: 90vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -136,4 +134,180 @@
 }
 
 /* ======== End of Style Search Area ====== ===*/
+
+/*=========  separator-1 =========*/
+#separator-1 {
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.25),rgb(1, 154, 74 ,0.25)),url("../images/header-a.jpg");
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; 
+    margin-bottom: 50px; 
+}
+/*=========  End of separator-1 =========*/
+
+
+/*=========   Style top Activities =========*/
+
+#top-activities{
+    margin-bottom : 70px;
+}
+
+.cards-section h2 {
+    margin-top: 20px ;
+    padding: 10px 10px;
+    font-size: 32px;
+    font-family: 'Taviraj',sans-serif;
+    font-weight: bold;
+    color: rgb(255, 121, 0); 
+}
+
+.cards-section .glider-contain {
+    height: 350px;
+    width: 94%;
+}
+
+.see-more{
+    margin : 45px 0px;
+    font-size: 22px;
+    font: bold ;
+    z-index: 2;
+}
+
+/*=========   End of Style top Activities section =========*/
+
+/*=========   Style places Cards =========*/
+.place-card{
+    min-width: 350px;
+    margin: 5px 3px;
+}
+
+.card {
+    border: 1px solid rgb(1, 154, 74 ,0.75);
+    background-color: rgba(128, 128, 128, 0.05);
+}
+
+.card-title {
+    text-align: center;
+    font-family: 'Taviraj',sans-serif;
+    font-weight: bold;
+}
+
+.card-text {
+    text-align: center;
+    font-family: 'Lato',sans-serif;
+
+}
+
+.place-location {
+    background-color: white;
+    border: 1px solid rgb(1, 154, 74) ;
+    border-radius: 20px;
+    min-width: fit-content;
+    height: 25px;
+    margin: 3px;
+}
+
+.place-activities {
+    margin: 5px;
+    padding: 5px;
+    height: fit-content;
+}
+
+.tags-view  {
+    border: 1px solid orange;
+    border-radius: 25px;
+    margin: 3px;
+    padding : 4px 10px;
+    background-color: rgba(255, 166, 0, 0.5);
+    font-size: 14px;
+    display: inline-block;
+}
+
+
+.card-link-btn {
+    background-color: rgba(0, 128, 0, 0.836);
+    width: 75px;
+    border-radius: 25px;
+}
+
+.card-link-btn:hover {
+    background-color: rgba(255, 166, 0);
+    width: 75px;
+    border-radius: 25px;
+}
+
+
+/*=========   End of Style places Cards =========*/
+
+
+/*=========   Style Activities & Counties Section =========*/
+#separator-2{
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.25),rgb(1, 154, 74 ,0.25)),url("../images/header-e.jpg");
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; 
+    margin-bottom: 50px; 
+}
+
+.activities-and-counties h2 ,
+#counties-section h2 {
+    padding: 5px 0px;
+    margin-top: 20px ;
+    font-size: 32px;
+    font-family: 'Taviraj',sans-serif;
+    font-weight: bold;
+    color: rgb(255, 121, 0); 
+}
+
+
+#activity-glider .glider-track {
+    margin: 15px 0px;
+    width :fit-content;
+    height: 50px;
+}
+
+.activity-tags {
+    border: 1px solid orange;
+    margin: 0 5px;
+    padding : 4px 10px;
+    border-radius: 25px;
+    background-color: rgba(255, 166, 0, 0.5);
+    font-size: 16px;
+    min-width: fit-content;
+    cursor: pointer;
+}
+
+.county-card{
+    background-color: white;
+    border: 1px solid rgb(1, 154, 74) ;
+    border-radius: 20px;
+    min-width: fit-content;
+    height: 45px;
+    margin: 10px;
+    padding: 4px 4px;
+    text-align: center;
+
+}
+.county-btn{
+
+    font-family: 'Lato',sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+#separator-3{
+    margin-top: 75px ;
+    background-image:  url("../images/header-b.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; 
+    height: 50vh;
+}
+
+/*=========   End of Style Activities & Counties Section =========*/
 

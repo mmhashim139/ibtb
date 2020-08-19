@@ -73,7 +73,7 @@ function updateDOM(forestParkData) {
                 <div class="card-text place-activities " id="place-tags">
                     ${tagView} 
                 </div>
-                <div class="row justify-content-center">
+                <div class="row justify-content-around place-contact-info">
                     <div class="col-4" id="place-url">
                         <a href="${item.websiteUrl}" target="_blank" class="card-link-btn btn btn-primary"><i class="fa fa-external-link" aria-hidden="true"></i></a>
                     </div>

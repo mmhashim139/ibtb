@@ -80,7 +80,7 @@
 <!-- ******************************** End of Search Area ********************************-->
 
 <!-- ******************************** Start Places Results Area ********************************-->  
-<div class="card-deck glider-contain"  id="search-reults"></div>
+<div class="card-deck"  id="search-reults"></div>
 <!-- ******************************** End Places Results Area ********************************--> 
 <!-- ********************************  Start Main Area  ********************************-->
 <main id="main-area"> 
@@ -90,9 +90,9 @@
 <!-- ************************* Start of Top Activities Browsing section ************************-->
 
 <div id="top-activities" class="container">
-<div class="row">
+
 <!--// ****** Castles ********//-->
-	<div class="cards-section col-12" >
+	<div class="cards-section " >
 		<h2>Historic Houses and Castles</h2>
     <div class="container">
         <div class="glider-contain ">
@@ -103,11 +103,12 @@
                 <button aria-label="Next" class="glider-next">»</button>
                 <div role="tablist" class="dots"></div>
         </div>
-        <div class="container">
+        <div class="row justify-content-end">
         <p class="see-more">See More <a id="more-castles" class="btn activity-tags">Castles</a></p>
         </div>
     </div>
     </div>
+<div class="row justify-content-between">
 <!--// ****** Forest Park ********//-->
 	<div class="cards-section col-md-6" >
 		<h2>National and Forest Park</h2>
@@ -120,7 +121,7 @@
         <button aria-label="Next" class="glider-next">»</button>
         <div role="tablist" class="dots"></div>
     </div>
-        <div class="container">
+        <div class="row justify-content-end">
            <p class="see-more">See More <a id="more-forest-parks" class="btn activity-tags">Forest Parks</a> </p>
         </div>
     </div>
@@ -138,7 +139,7 @@
         <div role="tablist" class="dots"></div>
 	</div>
     </div>
-    <div class="container">
+    <div class="row justify-content-end">
     <p class="see-more">See More  <a id="more-beaches" class="btn activity-tags">Beach</a> </p>
     </div>
 	</div>
@@ -151,10 +152,9 @@
 
 <!-- ******************************** Start More Activities & Counties Section ********************************-->
 <!-- ******************************** Start Activities Tags section ********************************-->
-<section class="container">
-<div class="row justify-content-between">
+<section class="container activities-and-counties">
+  <h2>Browse by Activity</h2>
 <div id="activities-tag-section" class="container">
-  <h2>More Activities</h2>
   <div class="container ">
     <div class="glider-contain ">
         <div class="glider" id="activity-glider" >
@@ -240,218 +240,140 @@
 <!-- ******************************** End of Activities Tags section ********************************-->
 
 <!-- ******************************** Start of Counties section ********************************-->
-<div id="counties-section" class="col-md-6">
-  <h2>Find a place by county</h2>
-  <div class="container cities">
+<div id="counties-section" >
+  <h2> Browse by county</h2>
+  <div class="container counties">
     <div class="glider-contain ">
     <div class="glider ">
     <div class="glider-track">
-    <div class="card col-md-2 city-card glider-slide active visible" >
-  <img class="card-img-top" src="images/blank.jpg" alt="Card image cap">
+    <div class="card col-md-2 county-card glider-slide active visible" >
   <div class="card-body">
-    <h5 class="card-title">Carlow</h5>
-    <p class="card-text">Discover Best Places to Be in Carlow</p>
-    <a href="#" class="btn btn-primary county-btn" >Carlow</a>
+    <a href="#" class="county-btn" >Carlow</a>
   </div>
     </div>
-    <div class="card col-md-2 city-card glider-slide active visible" >
-  <img class="card-img-top" src="images/blank.jpg" alt="Card image cap">
+    <div class="card col-md-2 county-card glider-slide active visible" >
   <div class="card-body">
-    <h5 class="card-title">Cavan</h5>
-    <p class="card-text">Discover Best Places to Be in Cavan</p>
-    <a href="#" class="btn btn-primary  county-btn" >Cavan</a>
+    <a href="#" class=" county-btn" >Cavan</a>
   </div>
     </div>
-    <div class="card col-md-2 city-card glider-slide active visible" >
-  <img class="card-img-top" src="images/blank.jpg" alt="Card image cap">
+    <div class="card col-md-2 county-card glider-slide active visible" >
   <div class="card-body">
-    <h5 class="card-title">Clare</h5>
-    <p class="card-text">Discover Best Places to Be in Clare</p>
-    <a href="#" class="btn btn-primary county-btn">Clare</a>
+    <a href="#" class="county-btn">Clare</a>
   </div>
     </div>
-    <div class="card col-md-2 city-card glider-slide active visible" >
-  <img class="card-img-top" src="images/blank.jpg" alt="Card image cap">
+    <div class="card col-md-2 county-card glider-slide active visible" >
   <div class="card-body">
-    <h5 class="card-title">Cork</h5>
-    <p class="card-text">Discover Best Places to Be in Cork</p>
-    <a href="#" class="btn btn-primary county-btn">Cork</a>
+    <a href="#" class="county-btn">Cork</a>
   </div>
     </div>
-    <div class="card col-md-2 city-card glider-slide active visible" >
-  <img class="card-img-top" src="images/blank.jpg" alt="Card image cap">
+    <div class="card col-md-2 county-card glider-slide active visible" >
   <div class="card-body">
-    <h5 class="card-title">Donegal</h5>
-    <p class="card-text">Discover Best Places to Be in Donegal</p>
-    <a href="#" class="btn btn-primary  county-btn">Donegal</a>
+    <a href="#" class=" county-btn">Donegal</a>
   </div>
     </div>
-    <div class="card col-md-2 city-card glider-slide active visible" >
-  <img class="card-img-top" src="images/blank.jpg" alt="Card image cap">
+    <div class="card col-md-2 county-card glider-slide active visible" >
   <div class="card-body">
-    <h5 class="card-title">Dublin</h5>
-    <p class="card-text">Discover Best Places to Be in Dublin</p>
-    <a href="#" class="btn btn-primary county-btn">Dublin</a>
+    <a href="#" class="county-btn">Dublin</a>
   </div>
     </div>
-    <div class="card col-md-2 city-card glider-slide active visible" >
-  <img class="card-img-top" src="images/blank.jpg" alt="Card image cap">
+    <div class="card col-md-2 county-card glider-slide active visible" >
   <div class="card-body">
-    <h5 class="card-title">Galway</h5>
-    <p class="card-text">Discover Best Places to Be in Galway</p>
-    <a href="#" class="btn btn-primary  county-btn">Galway</a>
+    <a href="#" class=" county-btn">Galway</a>
   </div>
     </div>
-    <div class="card col-md-2 city-card glider-slide active visible" >
-  <img class="card-img-top" src="images/blank.jpg" alt="Card image cap">
+    <div class="card col-md-2 county-card glider-slide active visible" >
   <div class="card-body">
-    <h5 class="card-title">Kerry</h5>
-    <p class="card-text">Discover Best Places to Be in Kerry</p>
-    <a href="#" class="btn btn-primary county-btn">Kerry</a>
+    <a href="#" class="county-btn">Kerry</a>
   </div>
     </div>
-    <div class="card col-md-2 city-card glider-slide active visible" >
-  <img class="card-img-top" src="images/blank.jpg" alt="Card image cap">
+    <div class="card col-md-2 county-card glider-slide active visible" >
   <div class="card-body">
-    <h5 class="card-title">Kildare</h5>
-    <p class="card-text">Discover Best Places to Be in Kildare</p>
-    <a href="#" class="btn btn-primary  county-btn">Kildare</a>
+    <a href="#" class=" county-btn">Kildare</a>
   </div>
     </div>
-    <div class="card col-md-2 city-card glider-slide active visible" >
-  <img class="card-img-top" src="images/blank.jpg" alt="Card image cap">
+    <div class="card col-md-2 county-card glider-slide active visible" >
   <div class="card-body">
-    <h5 class="card-title">Kilkenny</h5>
-    <p class="card-text">Discover Best Places to Be in Kilkenny</p>
-    <a href="#" class="btn btn-primary  county-btn">Kilkenny</a>
+    <a href="#" class=" county-btn">Kilkenny</a>
   </div>
     </div>
-    <div class="card col-md-2 city-card glider-slide active visible" >
-  <img class="card-img-top" src="images/blank.jpg" alt="Card image cap">
+    <div class="card col-md-2 county-card glider-slide active visible" >
   <div class="card-body">
-    <h5 class="card-title">Laois</h5>
-    <p class="card-text">Discover Best Places to Be in Laois</p>
-    <a href="#" class="btn btn-primary county-btn">Laois</a>
+    <a href="#" class="county-btn">Laois</a>
   </div>
     </div>
-    <div class="card col-md-2 city-card glider-slide active visible" >
-  <img class="card-img-top" src="images/blank.jpg" alt="Card image cap">
+    <div class="card col-md-2 county-card glider-slide active visible" >
   <div class="card-body">
-    <h5 class="card-title">Leitrim</h5>
-    <p class="card-text">Discover Best Places to Be in Leitrim</p>
-    <a href="#" class="btn btn-primary county-btn">Leitrim</a>
+    <a href="#" class="county-btn">Leitrim</a>
   </div>
     </div>
-    <div class="card col-md-2 city-card glider-slide active visible" >
-  <img class="card-img-top" src="images/blank.jpg" alt="Card image cap">
+    <div class="card col-md-2 county-card glider-slide active visible" >
   <div class="card-body">
-    <h5 class="card-title">Limerick</h5>
-    <p class="card-text">Discover Best Places to Be in Limerick</p>
-    <a href="#" class="btn btn-primary  county-btn">Limerick</a>
+    <a href="#" class=" county-btn">Limerick</a>
   </div>
     </div>
-    <div class="card col-md-2 city-card glider-slide active visible" >
-  <img class="card-img-top" src="images/blank.jpg" alt="Card image cap">
+    <div class="card col-md-2 county-card glider-slide active visible" >
   <div class="card-body">
-    <h5 class="card-title">Longford</h5>
-    <p class="card-text">Discover Best Places to Be in Longford</p>
-    <a href="#" class="btn btn-primary  county-btn">Longford</a>
+    <a href="#" class=" county-btn">Longford</a>
   </div>
     </div>
-    <div class="card col-md-2 city-card glider-slide active visible" >
-  <img class="card-img-top" src="images/blank.jpg" alt="Card image cap">
+    <div class="card col-md-2 county-card glider-slide active visible" >
   <div class="card-body">
-    <h5 class="card-title">Louth</h5>
-    <p class="card-text">Discover Best Places to Be in Louth</p>
-    <a href="#" class="btn btn-primary county-btn">Louth</a>
+    <a href="#" class="county-btn">Louth</a>
   </div>
     </div>
-    <div class="card col-md-2 city-card glider-slide active visible" >
-  <img class="card-img-top" src="images/blank.jpg" alt="Card image cap">
+    <div class="card col-md-2 county-card glider-slide active visible" >
   <div class="card-body">
-    <h5 class="card-title">Mayo</h5>
-    <p class="card-text">Discover Best Places to Be in Mayo</p>
-    <a href="#" class="btn btn-primary  county-btn">Mayo</a>
+    <a href="#" class=" county-btn">Mayo</a>
   </div>
     </div>
-    <div class="card col-md-2 city-card glider-slide active visible" >
-  <img class="card-img-top" src="images/blank.jpg" alt="Card image cap">
+    <div class="card col-md-2 county-card glider-slide active visible" >
   <div class="card-body">
-    <h5 class="card-title">Meath</h5>
-    <p class="card-text">Discover Best Places to Be in Meath</p>
-    <a href="#" class="btn btn-primary  county-btn" >Meath</a>
+    <a href="#" class=" county-btn" >Meath</a>
   </div>
     </div>
-    <div class="card col-md-2 city-card glider-slide active visible" >
-  <img class="card-img-top" src="images/blank.jpg" alt="Card image cap">
+    <div class="card col-md-2 county-card glider-slide active visible" >
   <div class="card-body">
-    <h5 class="card-title">Monaghan</h5>
-    <p class="card-text">Discover Best Places to Be in Monaghan</p>
-    <a href="#" class="btn btn-primary  county-btn">Monaghan</a>
+    <a href="#" class=" county-btn">Monaghan</a>
   </div>
     </div>
-    <div class="card col-md-2 city-card glider-slide active visible" >
-  <img class="card-img-top" src="images/blank.jpg" alt="Card image cap">
+    <div class="card col-md-2 county-card glider-slide active visible" >
   <div class="card-body">
-    <h5 class="card-title">Offaly</h5>
-    <p class="card-text">Discover Best Places to Be in Offaly</p>
-    <a href="#" class="btn btn-primary  county-btn">Offaly</a>
+    <a href="#" class=" county-btn">Offaly</a>
   </div>
     </div>
-    <div class="card col-md-2 city-card glider-slide active visible" >
-  <img class="card-img-top" src="images/blank.jpg" alt="Card image cap">
+    <div class="card col-md-2 county-card glider-slide active visible" >
   <div class="card-body">
-    <h5 class="card-title">Roscommon</h5>
-    <p class="card-text">Discover Best Places to Be in Roscommon</p>
-    <a href="#" class="btn btn-primary county-btn">Roscommon</a>
+    <a href="#" class="county-btn">Roscommon</a>
   </div>
     </div>
-    <div class="card col-md-2 city-card glider-slide active visible" >
-  <img class="card-img-top" src="images/blank.jpg" alt="Card image cap">
+    <div class="card col-md-2 county-card glider-slide active visible" >
   <div class="card-body">
-    <h5 class="card-title">Sligo</h5>
-    <p class="card-text">Discover Best Places to Be in Sligo</p>
-    <a href="#" class="btn btn-primary  county-btn">Sligo</a>
+    <a href="#" class=" county-btn">Sligo</a>
   </div>
     </div>
-    <div class="card col-md-2 city-card glider-slide active visible" >
-  <img class="card-img-top" src="images/blank.jpg" alt="Card image cap">
+    <div class="card col-md-2 county-card glider-slide active visible" >
   <div class="card-body">
-    <h5 class="card-title">Tipperary</h5>
-    <p class="card-text">Discover Best Places to Be in Tipperary</p>
-    <a href="#" class="btn btn-primary  county-btn">Tipperary</a>
+    <a href="#" class=" county-btn">Tipperary</a>
   </div>
     </div>
-    <div class="card col-md-2 city-card glider-slide active visible" >
-  <img class="card-img-top" src="images/blank.jpg" alt="Card image cap">
+    <div class="card col-md-2 county-card glider-slide active visible" >
   <div class="card-body">
-    <h5 class="card-title">Waterford</h5>
-    <p class="card-text">Discover Best Places to Be in Waterford</p>
-    <a href="#" class="btn btn-primary  county-btn">Waterford</a>
+    <a href="#" class=" county-btn">Waterford</a>
   </div>
     </div>
-    <div class="card col-md-2 city-card glider-slide active visible" >
-  <img class="card-img-top" src="images/blank.jpg" alt="Card image cap">
+    <div class="card col-md-2 county-card glider-slide active visible" >
   <div class="card-body">
-    <h5 class="card-title">Westmeath</h5>
-    <p class="card-text">Discover Best Places to Be in Westmeath</p>
-    <a href="#" class="btn btn-primary  county-btn">Westmeath</a>
+    <a href="#" class=" county-btn">Westmeath</a>
   </div>
     </div>
-    <div class="card col-md-2 city-card glider-slide active visible" >
-  <img class="card-img-top" src="images/blank.jpg" alt="Card image cap">
+    <div class="card col-md-2 county-card glider-slide active visible" >
   <div class="card-body">
-    <h5 class="card-title">Wexford</h5>
-    <p class="card-text">Discover Best Places to Be in Wexford</p>
-    <a href="#" class="btn btn-primary  county-btn">Wexford</a>
+    <a href="#" class=" county-btn">Wexford</a>
   </div>
     </div>
-    <div class="card col-md-2 city-card glider-slide active visible" >
-  <img class="card-img-top" src="images/blank.jpg" alt="Card image cap">
+    <div class="card col-md-2 county-card glider-slide active visible" >
   <div class="card-body">
-    <h5 class="card-title">Wicklow</h5>
-    <p class="card-text">Discover Best Places to Be in Wicklow</p>
-    <a href="#" class="btn btn-primary  county-btn">Wicklow</a>
+    <a href="#" class=" county-btn">Wicklow</a>
   </div>
     </div>
     </div>
@@ -462,11 +384,11 @@
     </div>
   </div>
 </div>
-</div>
-</section>
+</section> 
 <!-- ******************************** End of Counties section ********************************-->
 <!-- ******************************** Separator  Start ********************************-->
-	<div id="separator-3" class="col-md-5"></div>
+ 
+<div id="separator-3"></div>
 <!-- ******************************** Separator  End ********************************-->
 <!-- ******************************** End More Activities & Counties Section ********************************-->
 
