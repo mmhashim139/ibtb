@@ -1,5 +1,5 @@
 # IBTB , Ireland Best To Be 
-a tourism website that help the user to find an attraction or activity places in Ireland based on activity type or location area , and provide
+A tourism website that help the user to find an attraction or activity places in Ireland based on activity type or location area , and provide
 contact info & map location for each place .
  
 The website built with HTML, CSS & Javascript , and utilize API by Fáilte Ireland  “National Tourism Development Authority of Ireland” .
@@ -62,6 +62,7 @@ In oreder to achieve website goal the following Features required.
 - user can Add places review .
 - user can Add a place to his favorite after create an account .
 - add an image for each place .
+- Activate Conatct form to send an email & Validate Form with Js 
 
 ## Technologies Used 
  * HTML5 
@@ -76,17 +77,18 @@ In oreder to achieve website goal the following Features required.
 
 
  ## Testing
- Testing conducted Mostly by useing browser developer tool main area of function testings are 
- 1- Search Form . 
-    by typing an activity or location and click button the search results will appear in new section while other main area cleared .
-2 - search results .
-    Each search will show places and back home button to the main page .
-3 - Top activities .
-    for each top activities tag some results will show in a Carousel slider , if user clicked in the tag to see more the results will show as a search results.
-4- Activities & Counties Tags,
-    by click on activity or county tag search results will appear as a search results .
-5- All places browsing.
-    All places will show firest 50 place and user can click show more to see more results .
+
+ Testing conducted Mostly by useing browser developer tool main area of function testings are :
+- Search Form . 
+* By typing an activity or location and click button the search results will appear in new section while other main area cleared .
+- Search results .
+*  Each search will show places and back home button to the main page .
+- Top activities .
+* for each top activities tag some results will show in a Carousel slider , if user clicked in the tag to see more the results will show as a search results.
+- Activities & Counties Tags,
+* by click on activity or county tag search results will appear as a search results .
+- All places browsing.
+* All places will show firest 50 place and user can click show more to see more results .
 
 
 ## Deployment
@@ -100,7 +102,7 @@ Steps to Deployment :
 
 ## Credits 
 ### Media
-    Images used in the website downloaded from [Ixabay]((https://www.ixabay.com). with free to use licence .
+Images used in the website downloaded from [Ixabay](https://www.ixabay.com). with free to use licence .
 
 ### Acknowledgements
 Special thanks to my mentor Maranatha Ilesanmi , Code Institute community in #slack & stack overflow community where I found many of my questions answered there.
