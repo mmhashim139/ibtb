@@ -98,16 +98,16 @@ function updateDOM(searchData) {
     const backHome = document.createElement('div');
     backHome.classList.add('container');
     backHome.innerHTML=`
-    <div class="row my-4" >
-        <div class"col-md-12"><p class="message">Thanks for using our website ,We Are Working to Add more Places , come back again </p></div>
+    <div class="row " >
+        <div class"col-md-12 my-4"><p class="message">Thanks for using our website ,We Are Working to Add more Places , come back again </p></div>
     </div>
     `
     const backOptions = document.createElement('div');
     backOptions.classList.add('container');
     backOptions.innerHTML=`
-            <div class="row justify-content-center">
-            <div><a href="index.html" class="recommend-btn col-md-4 m-4">Back To Home</a></div>
-            <div><a href="allplaces.html" class="recommend-btn col-md-4 m-4">See All Places</a></div>
+            <div class="row search-bk-obtion ">
+            <a href="index.html" class="recommend-btn ">Back To Home</a>
+            <a href="allplaces.html" class="recommend-btn ">See All Places</a>
         </div>`
     ;
     searchResults.appendChild(backHome);
