@@ -55,7 +55,7 @@ function updateDOM(beachesData) {
                 });
     // insert new Places data in HTML Element
     const element = document.createElement('div');
-    element.classList.add('place-card');
+    element.classList.add('place-card','col-md-3');
     element.innerHTML = `
         <div class="card">
             <!-- <div id="place-image"><img class="card-img-top" src="images/failte-logo.jpg" alt="Card image cap"></div> -->

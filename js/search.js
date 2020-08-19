@@ -66,7 +66,7 @@ function updateDOM(searchData) {
                 });
     // insert new Places data in HTML Element
     const element = document.createElement('div');
-    element.classList.add('place-card');
+    element.classList.add('col-md-4',);
     element.innerHTML = `
         <div class="card">
             <!-- <div id="place-image"><img class="card-img-top" src="images/failte-logo.jpg" alt="Card image cap"></div> -->
@@ -96,19 +96,30 @@ function updateDOM(searchData) {
     searchResults.appendChild(element);
     });    
     const backHome = document.createElement('div');
-    backHome.classList.add('row');
+    backHome.classList.add('container');
     backHome.innerHTML=`
-    <a href="index.html" class="btn">Back To Home</a>`;
+    <div class="row my-4" >
+        <div class"col-md-12"><p class="message">Thanks for using our website ,We Are Working to Add more Places , come back again </p></div>
+    </div>
+    `
+    const backOptions = document.createElement('div');
+    backOptions.classList.add('container');
+    backOptions.innerHTML=`
+            <div class="row justify-content-center">
+            <div><a href="index.html" class="recommend-btn col-md-4 m-4">Back To Home</a></div>
+            <div><a href="allplaces.html" class="recommend-btn col-md-4 m-4">See All Places</a></div>
+        </div>`
+    ;
     searchResults.appendChild(backHome);
+    searchResults.appendChild(backOptions);
 }
 
 // add search button click event lisiner to show search reults ;
 
 searchBtn.addEventListener("click", () => { 
         searchData = [];
-        fetchData(`${searchUrl}('${searchName.value}')`, updateDOM);
-        fetchData( `${searchUrl}('${searchTag.value}')&$top=12`, updateDOM);
-        fetchData(`${searchUrl}('${searchLocation.value}')`, updateDOM);
+        fetchData( `${searchUrl}('${searchTag.value}')&$top=20`, updateDOM);
+        fetchData(`${searchUrl}('${searchLocation.value}')&$top=20`, updateDOM);
     });
 
 

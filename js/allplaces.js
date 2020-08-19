@@ -59,7 +59,7 @@ function updateDOM(places) {
                 });
     // insert new Places data in HTML Element
     const element = document.createElement('div');
-    element.classList.add('place-card');
+    element.classList.add('col-md-4');
     element.innerHTML = `
         <div class="card">
             <!-- <div id="place-image"><img class="card-img-top" src="images/failte-logo.jpg" alt="Card image cap"></div> -->
@@ -91,8 +91,19 @@ function updateDOM(places) {
     const backHome = document.createElement('div');
     backHome.classList.add('container');
     backHome.innerHTML=`
-    <a href="index.html" class="btn">Back To Home</a>`;
-    cardDeck.appendChild(backHome);   
+    <div class="row my-4" >
+        <div class"col-md-12"><p class="message">Thanks for using our website ,We Are Working to Add more Places , come back again </p></div>
+    </div>
+    `
+    const backOptions = document.createElement('div');
+    backOptions.classList.add('container');
+    backOptions.innerHTML=`
+            <div class="row justify-content-center">
+            <div><a href="index.html" class="recommend-btn col-md-4 m-4">Back To Home</a></div>
+        </div>`
+    ;
+    cardDeck.appendChild(backHome);
+    cardDeck.appendChild(backOptions);
 }
 
 fetchData(baseApiUrl, updateDOM);

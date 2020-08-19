@@ -401,6 +401,39 @@
 }
 
 
+/*=========   End of about Section =========*/
 
 
+/*=========   All Pages & Search Results  =========*/
 
+.show-more-btn{
+    margin: 25px 0px;
+    padding: 15px;
+    background-color:rgb(1, 154, 74);
+    color:  white ;
+    font-size: 16px;
+    font-family: 'Taviraj', sans-serif;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+.show-more-btn:hover{
+    padding: 15px;
+    background-color: rgb(255, 121, 0);
+    color: white;
+    font-size: 16px;
+    font-family: 'Taviraj', sans-serif;
+    border-radius: 20px;
+    text-decoration: none;
+    transform: scale(1.1);
+
+}
+
+
+.message{
+    font-size: 21px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+
+}
